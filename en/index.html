@@ -7,7 +7,7 @@ description: "Vibe coding with Cursor? Track bugs and tasks on GitHub Issues —
 permalink: /en/
 ---
 
-<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-grid-pattern">
+<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-x-hidden bg-grid-pattern">
     <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
 
     <div class="max-w-7xl mx-auto hero-index__grid grid gap-8 items-center px-6 w-full relative z-10">
@@ -57,8 +57,8 @@ permalink: /en/
             </div>
         </div>
 
-        <div class="reveal delay-200 relative min-w-0 lg:overflow-visible">
-            <div class="hero-index__visual relative flex flex-col">
+        <div class="reveal delay-200 relative min-w-0 w-full">
+            <div class="hero-index__visual relative flex flex-col w-full max-w-full">
             {% include hero-beam-animation.html %}
             <div class="relative bg-[#0a0a0a] rounded-lg border border-brand-purple/30 shadow-2xl overflow-hidden font-mono text-xs">
                 <div class="bg-[#111] px-4 py-2 flex items-center justify-between border-b border-white/10">
@@ -84,11 +84,11 @@ permalink: /en/
                     </div>
                 </div>
             </div>
-            <div class="absolute lg:right-4 xl:-right-4 top-1/4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-4 rounded shadow-xl hidden md:block">
+            <div class="absolute right-3 top-[calc(11.5rem+1rem)] bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
                 <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Typical flow</div>
                 <div class="text-sm font-bold font-mono text-brand-purple">Chat → issue #12</div>
             </div>
-            <div class="absolute -left-8 bottom-1/4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-4 rounded shadow-xl hidden lg:block">
+            <div class="absolute left-3 bottom-6 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
                 <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">No gh CLI</div>
                 <div class="text-sm font-bold font-mono text-green-500">urllib + token</div>
             </div>
