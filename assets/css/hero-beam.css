@@ -1,0 +1,165 @@
+/* Hero Beam Transfer — fixed height, no layout shift, 8s loop */
+
+.hero-beam {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    flex-shrink: 0;
+}
+
+.hero-beam__stage {
+    width: 100%;
+    height: 11.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #0a0a0a;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-beam__stage svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 8s master loop */
+.hero-beam__chat {
+    opacity: 0;
+    animation: beam-chat 8s ease-in-out infinite;
+}
+
+.hero-beam__source-outer {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: beam-source-pulse 8s ease-in-out infinite;
+}
+
+.hero-beam__beam-main {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: beam-draw 8s ease-in-out infinite;
+}
+
+.hero-beam__beam-tail {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: beam-draw-tail 8s ease-in-out infinite;
+}
+
+.hero-beam__glow {
+    opacity: 0;
+    animation: beam-glow 8s ease-in-out infinite;
+}
+
+.hero-beam__particle {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: beam-particle 8s linear infinite;
+}
+
+.hero-beam__particle--2 {
+    animation-delay: 0.15s;
+}
+
+.hero-beam__particle--3 {
+    animation-delay: 0.3s;
+}
+
+.hero-beam__card {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: beam-card 8s ease-in-out infinite;
+}
+
+@keyframes beam-chat {
+    0%, 4%, 92%, 100% { opacity: 0; }
+    8%, 78% { opacity: 1; }
+    88% { opacity: 0.25; }
+}
+
+@keyframes beam-source-pulse {
+    0%, 6%, 100% { transform: scale(1); }
+    10% { transform: scale(1.12); }
+    14% { transform: scale(1); }
+    18% { transform: scale(1.06); }
+    22%, 78% { transform: scale(1); }
+}
+
+@keyframes beam-draw {
+    0%, 12%, 92%, 100% { stroke-dashoffset: 200; }
+    28%, 78% { stroke-dashoffset: 0; }
+    88% { stroke-dashoffset: 200; }
+}
+
+@keyframes beam-draw-tail {
+    0%, 22%, 92%, 100% { stroke-dashoffset: 40; }
+    34%, 78% { stroke-dashoffset: 0; }
+    88% { stroke-dashoffset: 40; }
+}
+
+@keyframes beam-glow {
+    0%, 14%, 90%, 100% { opacity: 0; }
+    20%, 40% { opacity: 0.55; }
+    50%, 78% { opacity: 0.35; }
+    86% { opacity: 0; }
+}
+
+@keyframes beam-particle {
+    0%, 14%, 90%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    18% { opacity: 0.9; }
+    32% {
+        opacity: 0.9;
+        transform: translateX(118px);
+    }
+    36% { opacity: 0; }
+    78% { opacity: 0; }
+}
+
+@keyframes beam-card {
+    0%, 30%, 92%, 100% {
+        opacity: 0;
+        transform: translateY(6px) scale(0.98);
+    }
+    36%, 78% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    88% {
+        opacity: 0;
+        transform: translateY(4px) scale(0.99);
+    }
+}
+
+@media (min-width: 640px) {
+    .hero-beam__stage {
+        height: 12.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-beam__chat,
+    .hero-beam__source-outer,
+    .hero-beam__beam-main,
+    .hero-beam__beam-tail,
+    .hero-beam__glow,
+    .hero-beam__particle,
+    .hero-beam__card {
+        animation: none !important;
+    }
+
+    .hero-beam__chat { opacity: 1; }
+    .hero-beam__beam-main,
+    .hero-beam__beam-tail { stroke-dashoffset: 0; }
+    .hero-beam__glow { opacity: 0.35; }
+    .hero-beam__particle { opacity: 0; }
+    .hero-beam__card {
+        opacity: 1;
+        transform: none;
+    }
+}
