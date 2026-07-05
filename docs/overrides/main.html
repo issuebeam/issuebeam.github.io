@@ -8,11 +8,5 @@
     {% set back_url = "https://issuebeam.github.io/en/" %}
     {% set back_label = "← Back to main website (issuebeam.github.io)" %}
   {% endif %}
-  <aside class="md-banner" data-md-component="banner">
-    <div class="md-banner__inner md-grid md-typeset">
-      <a href="{{ back_url }}" style="color: inherit; text-decoration: none;">
-        <strong>{{ back_label }}</strong>
-      </a>
-    </div>
-  </aside>
+  <a href="{{ back_url }}"><strong>{{ back_label }}</strong></a>
 {% endblock %}
