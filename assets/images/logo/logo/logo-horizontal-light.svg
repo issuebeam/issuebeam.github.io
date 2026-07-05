@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" fill="none" role="img" aria-label="Issuebeam">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 80" fill="none" role="img" aria-label="Issuebeam">
   <title>Issuebeam</title>
   <desc>Logo Issuebeam per sfondi chiari: punto sorgente, raggio viola e wordmark</desc>
-  <circle cx="28" cy="40" r="10" fill="#7c3aed"/>
-  <circle cx="28" cy="40" r="5" fill="#c084fc"/>
-  <line x1="38" y1="40" x2="58" y2="40" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
-  <line x1="58" y1="40" x2="78" y2="40" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-  <text x="88" y="48" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800" fill="#0f172a" letter-spacing="-0.02em">Issuebeam</text>
+  <circle cx="28" cy="40" r="11" fill="#7c3aed"/>
+  <circle cx="28" cy="40" r="5.5" fill="#c084fc"/>
+  <line x1="39" y1="40" x2="60" y2="40" stroke="#7c3aed" stroke-width="5" stroke-linecap="round"/>
+  <line x1="60" y1="40" x2="82" y2="40" stroke="#a78bfa" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+  <text x="92" y="50" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="900" fill="#0f172a" letter-spacing="-0.03em">Issuebeam</text>
 </svg>
