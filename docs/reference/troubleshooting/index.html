@@ -1421,9 +1421,9 @@
 </tbody>
 </table>
 <h2 id="verify-setup">Verify setup<a class="headerlink" href="#verify-setup" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -c &quot;import os; print(&#39;token:&#39;, &#39;OK&#39; if os.environ.get(&#39;GITHUB_TOKEN&#39;) else &#39;MISSING&#39;)&quot;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>type tracker\github_repo
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import os; print(&#39;token:&#39;, &#39;OK&#39; if os.environ.get(&#39;GITHUB_TOKEN&#39;) else &#39;MISSING&#39;)&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cat<span class="w"> </span>tracker/github_repo
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
 <h2 id="get-help">Get help<a class="headerlink" href="#get-help" title="Permanent link">&para;</a></h2>
 <p>Open an issue on <a href="https://github.com/issuebeam/issuebeam/issues">github.com/issuebeam/issuebeam</a>.</p>

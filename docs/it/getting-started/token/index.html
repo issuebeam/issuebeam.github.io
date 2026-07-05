@@ -629,18 +629,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variabile-utente-windows-consigliata" class="md-nav__link">
+  <a href="#imposta-github_token-consigliato" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variabile utente Windows (consigliata)
+        Imposta GITHUB_TOKEN (consigliato)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Variabile utente Windows (consigliata)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativa-env-o-secrets-tutti-i-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternativa: .env o .secrets/ (tutti i SO)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verifica" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -650,20 +660,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#opzionale-github_repo-in-variabili-utente" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#ordine-di-lettura-token-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opzionale: GITHUB_REPO in variabili utente
+        Ordine di lettura token (CLI)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#opzionale-github_repo-nellambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzionale: GITHUB_REPO nell'ambiente
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1407,18 +1423,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variabile-utente-windows-consigliata" class="md-nav__link">
+  <a href="#imposta-github_token-consigliato" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variabile utente Windows (consigliata)
+        Imposta GITHUB_TOKEN (consigliato)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Variabile utente Windows (consigliata)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativa-env-o-secrets-tutti-i-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternativa: .env o .secrets/ (tutti i SO)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verifica" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1428,20 +1454,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#opzionale-github_repo-in-variabili-utente" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#ordine-di-lettura-token-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opzionale: GITHUB_REPO in variabili utente
+        Ordine di lettura token (CLI)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#opzionale-github_repo-nellambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzionale: GITHUB_REPO nell'ambiente
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1467,6 +1499,7 @@
 
 <h1 id="token-github">Token GitHub<a class="headerlink" href="#token-github" title="Permanent link">&para;</a></h1>
 <p>Serve un <strong>Personal Access Token</strong> con permesso di leggere e scrivere le issue del repository target.</p>
+<p>Issuebeam funziona su <strong>Windows, macOS e Linux</strong> — cambia solo il modo in cui esporti <code>GITHUB_TOKEN</code>. La CLI è identica ovunque: <code>python scripts/github_issue.py</code>.</p>
 <h2 id="classic-token">Classic token<a class="headerlink" href="#classic-token" title="Permanent link">&para;</a></h2>
 <ol>
 <li>GitHub → <strong>Settings</strong> → <strong>Developer settings</strong> → <strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong></li>
@@ -1486,49 +1519,101 @@
 <thead>
 <tr>
 <th>Metodo</th>
+<th>Funziona su</th>
 <th>Pro</th>
 <th>Contro</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Variabile utente Windows <code>GITHUB_TOKEN</code></strong></td>
-<td>Funziona in IDE, terminale, agent</td>
-<td>Va impostata una volta per macchina</td>
+<td><strong>Variabile <code>GITHUB_TOKEN</code></strong></td>
+<td>Win · Mac · Linux</td>
+<td>Terminale e agenti AI</td>
+<td>Riavvia IDE/shell dopo la modifica</td>
 </tr>
 <tr>
-<td><strong>File <code>.secrets/github_token</code></strong></td>
-<td>Gitignored, facile</td>
+<td><strong><code>.secrets/github_token</code></strong></td>
+<td>Tutti</td>
+<td>Gitignored, semplice, portabile</td>
 <td>File locale — mai committare</td>
 </tr>
 <tr>
-<td><strong>File <code>.env</code></strong></td>
+<td><strong><code>.env</code></strong></td>
+<td>Tutti</td>
 <td>Comodo in dev</td>
 <td>Rischio commit accidentale (gitignored)</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Mai</strong> incollare il token in chat con l'agente, issue pubbliche o commit.</p>
-<h2 id="variabile-utente-windows-consigliata">Variabile utente Windows (consigliata)<a class="headerlink" href="#variabile-utente-windows-consigliata" title="Permanent link">&para;</a></h2>
+<h2 id="imposta-github_token-consigliato">Imposta <code>GITHUB_TOKEN</code> (consigliato)<a class="headerlink" href="#imposta-github_token-consigliato" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <ol>
-<li>Apri <strong>Variabili d'ambiente</strong> (sezione utente)</li>
-<li><strong>Nuova…</strong> → Nome: <code>GITHUB_TOKEN</code> — Valore: <code>github_pat_...</code></li>
+<li>Apri <strong>Variabili d'ambiente</strong> → <strong>Variabili utente</strong> → <strong>Nuova…</strong></li>
+<li>Nome: <code>GITHUB_TOKEN</code> — Valore: <code>github_pat_...</code></li>
 <li>OK su tutte le finestre</li>
-<li><strong>Riavvia l'IDE</strong> (Cursor, VS Code, …) o il terminale integrato</li>
+<li><strong>Riavvia l'IDE</strong> (Cursor, VS Code, …) o apri un nuovo terminale</li>
 </ol>
-<h3 id="verifica">Verifica<a class="headerlink" href="#verifica" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -c &quot;import os; t=os.environ.get(&#39;GITHUB_TOKEN&#39;,&#39;&#39;); print(&#39;OK&#39; if t else &#39;MANCANTE&#39;, len(t))&quot;
+<p><strong>Extra:</strong> se il terminale dell'IDE non vede ancora la variabile, issuebeam legge anche il <strong>registry utente Windows</strong> (stesso valore) — nessun setup aggiuntivo.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><strong>Terminale / agenti CLI</strong> — aggiungi a <code>~/.zshrc</code> o <code>~/.bashrc</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span>github_pat_...
 </code></pre></div>
-<p>Se <code>MANCANTE</code> ma hai impostato la variabile utente, lo script legge anche il <strong>registry Windows</strong> — prova:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python scripts/github_issue.py list
-</code></pre></div>
-<p>(dopo aver configurato lo slug)</p>
-<h3 id="opzionale-github_repo-in-variabili-utente">Opzionale: <code>GITHUB_REPO</code> in variabili utente<a class="headerlink" href="#opzionale-github_repo-in-variabili-utente" title="Permanent link">&para;</a></h3>
-<p>Utile se lavori sempre sullo stesso repo:</p>
+<p>Poi <code>source ~/.zshrc</code> (o nuovo terminale).</p>
+<p><strong>App GUI (Cursor, VS Code dal Dock)</strong> — le variabili della shell non sempre arrivano alle app avviate dal launcher. Opzioni:</p>
 <ul>
-<li>Nome: <code>GITHUB_REPO</code></li>
-<li>Valore: <code>myorg/my-app</code></li>
+<li>Avvia l'IDE dal terminale: <code>cursor .</code> o <code>code .</code></li>
+<li>Oppure usa <code>.env</code> / <code>.secrets/github_token</code> nel progetto (sotto)</li>
 </ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><strong>Shell</strong> — aggiungi a <code>~/.bashrc</code>, <code>~/.zshrc</code>, o usa <a href="https://direnv.net/">direnv</a> nel repo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span>github_pat_...
+</code></pre></div>
+<p><strong>Sessione utente systemd</strong> (opzionale, per tool GUI):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># ~/.config/environment.d/github.conf</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">GITHUB_TOKEN</span><span class="o">=</span><span class="s">github_pat_...</span>
+</code></pre></div>
+<p>Logout e login. In alternativa <code>.env</code> o <code>.secrets/github_token</code>.</p>
+<h2 id="alternativa-env-o-secrets-tutti-i-so">Alternativa: <code>.env</code> o <code>.secrets/</code> (tutti i SO)<a class="headerlink" href="#alternativa-env-o-secrets-tutti-i-so" title="Permanent link">&para;</a></h2>
+<p><strong><code>.env</code></strong> nella root del repo (gitignored):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GITHUB_REPO=myorg/my-app
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>GITHUB_TOKEN=github_pat_...
+</code></pre></div>
+<p><strong><code>.secrets/github_token</code></strong> — una riga, gitignored:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>.secrets
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;%s\n&#39;</span><span class="w"> </span><span class="s1">&#39;github_pat_...&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>.secrets/github_token
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>.secrets/github_token<span class="w">   </span><span class="c1"># macOS / Linux</span>
+</code></pre></div>
+<h2 id="verifica">Verifica<a class="headerlink" href="#verifica" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import os; print(&#39;OK&#39; if os.environ.get(&#39;GITHUB_TOKEN&#39;) else &#39;MANCANTE&#39;)&quot;</span>
+</code></pre></div>
+<p>Poi (dopo lo <a href="../repository/">slug repository</a>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
+</code></pre></div>
+<h2 id="ordine-di-lettura-token-cli">Ordine di lettura token (CLI)<a class="headerlink" href="#ordine-di-lettura-token-cli" title="Permanent link">&para;</a></h2>
+<p>Lo script legge il token automaticamente:</p>
+<ol>
+<li><code>GITHUB_TOKEN</code> nell'ambiente del processo corrente</li>
+<li><strong>Solo Windows:</strong> variabile utente da registry (aiuta i terminali IDE)</li>
+<li><code>.env</code> nella root del repo</li>
+<li><code>.secrets/github_token</code></li>
+</ol>
+<h2 id="opzionale-github_repo-nellambiente">Opzionale: <code>GITHUB_REPO</code> nell'ambiente<a class="headerlink" href="#opzionale-github_repo-nellambiente" title="Permanent link">&para;</a></h2>
+<p>Stessi metodi di <code>GITHUB_TOKEN</code> — utile se lavori sempre sullo stesso repo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GITHUB_REPO</span><span class="o">=</span>myorg/my-app
+</code></pre></div>
 
 
 

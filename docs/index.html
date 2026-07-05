@@ -1471,7 +1471,7 @@
 
 
 <h1 id="issuebeam">Issuebeam<a class="headerlink" href="#issuebeam" title="Permanent link">&para;</a></h1>
-<p><strong>Issuebeam</strong> wires <strong>AI coding agents</strong> to <strong>GitHub Issues</strong> with a stdlib Python CLI and repository instruction files. Works with Cursor, Claude Code, GitHub Copilot, Windsurf, Cline, Gemini CLI, Codex CLI, Aider, and manual use.</p>
+<p><strong>Issuebeam</strong> wires <strong>AI coding agents</strong> to <strong>GitHub Issues</strong> with a stdlib Python CLI and repository instruction files. Works on <strong>Windows, macOS, and Linux</strong> with Cursor, Claude Code, GitHub Copilot, and more.</p>
 <div class="admonition info">
 <p class="admonition-title">Bilingual documentation</p>
 <p>This site is also available in <strong>Italiano</strong>. Use the language selector in the top navigation bar.</p>
@@ -1503,14 +1503,14 @@
 <p>You ship with <strong>vibe coding</strong> (LLMs, fast iteration) and lose track of bugs and tasks buried in chat. Issuebeam moves operational status to GitHub Issues — not scattered markdown files.</p>
 <p><strong>Not Cursor-only.</strong> The same CLI runs everywhere; only the instruction file path changes per IDE.</p>
 <h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>echo myorg/my-app&gt; tracker\github_repo
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python scripts/github_issue.py labels --apply
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python scripts/github_issue.py create &quot;Setup test&quot; --labels task
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pathlib import Path; Path(&#39;tracker/github_repo&#39;).write_text(&#39;myorg/my-app\n&#39;)&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels<span class="w"> </span>--apply
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;Setup test&quot;</span><span class="w"> </span>--labels<span class="w"> </span>task
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
 <p>Details: <a href="getting-started/overview/">Overview</a> · <a href="getting-started/token/">Token</a> · <a href="platforms/overview/">Platforms</a></p>
 <h2 id="adopt-into-your-repo">Adopt into your repo<a class="headerlink" href="#adopt-into-your-repo" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python scripts/adopt.py --target ..\my-repo --repo myorg/my-app
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/adopt.py<span class="w"> </span>--target<span class="w"> </span>../my-repo<span class="w"> </span>--repo<span class="w"> </span>myorg/my-app
 </code></pre></div>
 <p>Copies CLI, labels, templates, and agent instruction files for multiple platforms.</p>
 <h2 id="documentation-map">Documentation map<a class="headerlink" href="#documentation-map" title="Permanent link">&para;</a></h2>
@@ -1548,7 +1548,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mkdocs<span class="w"> </span>serve
 </code></pre></div>
-<p>Preview at http://127.0.0.1:8000 — publish with <code>scripts\publish_docs.bat</code>, then <code>git push</code> in sibling repo <code>issuebeam.github.io</code>. <strong>No GitHub Actions.</strong></p>
+<p>Preview at http://127.0.0.1:8000 — publish with <code>python scripts/publish_docs.py</code>, then <code>git push</code> in sibling repo <code>issuebeam.github.io</code>. <strong>No GitHub Actions.</strong></p>
 <h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
 <p>MIT — Copyright © 2026 <a href="https://antoniotrento.net">Antonio Trento</a>. See <a href="https://github.com/issuebeam/issuebeam/blob/main/LICENSE">LICENSE</a>.</p>
 

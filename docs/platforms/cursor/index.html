@@ -1423,8 +1423,8 @@
 <p>In chat: <em>"List open GitHub issues"</em> → agent should run <code>python scripts/github_issue.py list</code>.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Works in Agent mode and integrated terminal.</li>
-<li><code>GITHUB_TOKEN</code> from Windows user env is read via registry.</li>
+<li>Works in Agent mode and integrated terminal on all OS.</li>
+<li>On <strong>Windows</strong>, <code>GITHUB_TOKEN</code> from user env can also be read via registry if the IDE shell does not inherit it.</li>
 <li>Italian phrases like <em>«apri issue per…»</em> are documented in the rule file.</li>
 <li>This rule is Cursor-specific; other platforms use <code>AGENTS.md</code> — see <a href="../overview/">overview</a>.</li>
 </ul>

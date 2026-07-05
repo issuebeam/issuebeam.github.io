@@ -1423,8 +1423,8 @@
 <p>In chat: <em>«Elenca le issue GitHub aperte»</em> → l'agente deve eseguire <code>python scripts/github_issue.py list</code>.</p>
 <h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Funziona in modalità Agent e terminale integrato.</li>
-<li><code>GITHUB_TOKEN</code> da variabile utente Windows viene letto via registry.</li>
+<li>Funziona in modalità Agent e terminale integrato su tutti i SO.</li>
+<li>Su <strong>Windows</strong>, <code>GITHUB_TOKEN</code> da variabile utente può essere letto anche via registry se la shell IDE non lo eredita.</li>
 <li>Frasi italiane come <em>«apri issue per…»</em> sono documentate nella regola.</li>
 <li>Questa regola è specifica per Cursor; altre piattaforme usano <code>AGENTS.md</code> — vedi <a href="../overview/">panoramica</a>.</li>
 </ul>

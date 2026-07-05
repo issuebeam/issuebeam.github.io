@@ -1509,14 +1509,14 @@
 <h2 id="posso-adottarlo-in-un-progetto-esistente">Posso adottarlo in un progetto esistente?<a class="headerlink" href="#posso-adottarlo-in-un-progetto-esistente" title="Permanent link">&para;</a></h2>
 <p>Sì: <code>python scripts/adopt.py --target ../my-repo --repo myorg/my-app</code></p>
 <h2 id="dove-metto-il-token">Dove metto il token?<a class="headerlink" href="#dove-metto-il-token" title="Permanent link">&para;</a></h2>
-<p>Preferisci la variabile utente Windows <code>GITHUB_TOKEN</code>. Alternative: <code>.env</code> (gitignored) o <code>.secrets/github_token</code>. Mai committare token o incollarli in chat.</p>
+<p>Preferisci <code>GITHUB_TOKEN</code> come variabile d'ambiente (Windows, macOS, Linux). Alternative: <code>.env</code> (gitignored) o <code>.secrets/github_token</code>. Su Windows la CLI può leggere anche le variabili utente dal registry se il terminale IDE non le eredita.</p>
 <h2 id="posso-usarlo-senza-agente-ai">Posso usarlo senza agente AI?<a class="headerlink" href="#posso-usarlo-senza-agente-ai" title="Permanent link">&para;</a></h2>
 <p>Sì. La CLI funziona anche per umani — molti team partono da CLI + label, poi aggiungono le regole agente.</p>
 <h2 id="come-pubblico-questa-documentazione">Come pubblico questa documentazione?<a class="headerlink" href="#come-pubblico-questa-documentazione" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install -r docs/requirements.txt
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scripts\publish_docs.bat
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>cd ..\issuebeam.github.io
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git push
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>scripts/publish_docs.py
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>../issuebeam.github.io
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>push
 </code></pre></div>
 <p>Sito: <a href="https://issuebeam.github.io/docs/it/">issuebeam.github.io/docs/it</a></p>
 

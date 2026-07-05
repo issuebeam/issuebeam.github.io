@@ -1388,7 +1388,7 @@
 
 
 <h1 id="other-agents">Other agents<a class="headerlink" href="#other-agents" title="Permanent link">&para;</a></h1>
-<p>Copy <strong><code>AGENTS.md</code></strong> into the format your tool expects.</p>
+<p>Copy <strong><code>AGENTS.md</code></strong> into the format your tool expects. The CLI is identical on <strong>Windows, macOS, and Linux</strong>.</p>
 <h2 id="platform-reference">Platform reference<a class="headerlink" href="#platform-reference" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1402,7 +1402,7 @@
 <tr>
 <td><strong>Windsurf</strong></td>
 <td><code>.windsurfrules</code></td>
-<td><code>copy AGENTS.md .windsurfrules</code></td>
+<td><code>cp AGENTS.md .windsurfrules</code></td>
 </tr>
 <tr>
 <td><strong>Cline</strong></td>
@@ -1417,7 +1417,7 @@
 <tr>
 <td><strong>Gemini CLI</strong></td>
 <td><code>GEMINI.md</code></td>
-<td><code>copy AGENTS.md GEMINI.md</code></td>
+<td><code>cp AGENTS.md GEMINI.md</code></td>
 </tr>
 <tr>
 <td><strong>OpenAI Codex CLI</strong></td>
@@ -1438,13 +1438,13 @@
 </table>
 <h2 id="manual-use-no-ai">Manual use (no AI)<a class="headerlink" href="#manual-use-no-ai" title="Permanent link">&para;</a></h2>
 <p>No agent required:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python scripts/github_issue.py create &quot;Bug: login redirect&quot; --labels bug
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;Bug: login redirect&quot;</span><span class="w"> </span>--labels<span class="w"> </span>bug
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
 <p>Many teams adopt issuebeam for <strong>CLI + labels + templates</strong> first, then add agent rules per IDE.</p>
 <h2 id="custom-agents-and-ci">Custom agents and CI<a class="headerlink" href="#custom-agents-and-ci" title="Permanent link">&para;</a></h2>
 <p>Any automation that runs Python can use issuebeam without an LLM:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python scripts/github_issue.py create &quot;CI: flaky test on main&quot; --labels bug,area-infra
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;CI: flaky test on main&quot;</span><span class="w"> </span>--labels<span class="w"> </span>bug,area-infra
 </code></pre></div>
 <p>For custom LLM agents:</p>
 <ul>

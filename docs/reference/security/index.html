@@ -1198,10 +1198,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssl-on-windows" class="md-nav__link">
+  <a href="#ssl-corporate-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSL on Windows
+        SSL / corporate proxy
       
     </span>
   </a>
@@ -1209,10 +1209,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#token-resolution-order" class="md-nav__link">
+  <a href="#token-resolution-order-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Token resolution order
+        Token resolution order (CLI)
       
     </span>
   </a>
@@ -1368,10 +1368,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssl-on-windows" class="md-nav__link">
+  <a href="#ssl-corporate-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSL on Windows
+        SSL / corporate proxy
       
     </span>
   </a>
@@ -1379,10 +1379,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#token-resolution-order" class="md-nav__link">
+  <a href="#token-resolution-order-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Token resolution order
+        Token resolution order (CLI)
       
     </span>
   </a>
@@ -1423,16 +1423,16 @@
 <li><strong>Never</strong> commit tokens or share screenshots with tokens visible</li>
 <li><strong>Never</strong> use PowerShell scripts in this stack (antivirus / team policy) — Python only</li>
 </ul>
-<h2 id="ssl-on-windows">SSL on Windows<a class="headerlink" href="#ssl-on-windows" title="Permanent link">&para;</a></h2>
-<p>If you see SSL certificate errors toward <code>api.github.com</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install -r requirements-optional.txt
+<h2 id="ssl-corporate-proxy">SSL / corporate proxy<a class="headerlink" href="#ssl-corporate-proxy" title="Permanent link">&para;</a></h2>
+<p>If you see SSL certificate errors toward <code>api.github.com</code> (common on <strong>Windows</strong> with corporate AV/proxy, sometimes elsewhere):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-optional.txt
 </code></pre></div>
-<p>Installs <code>truststore</code> which uses the Windows trust store.</p>
-<h2 id="token-resolution-order">Token resolution order<a class="headerlink" href="#token-resolution-order" title="Permanent link">&para;</a></h2>
+<p>Installs optional <code>truststore</code> (uses the OS trust store on Windows).</p>
+<h2 id="token-resolution-order-cli">Token resolution order (CLI)<a class="headerlink" href="#token-resolution-order-cli" title="Permanent link">&para;</a></h2>
 <p>The CLI reads the token automatically:</p>
 <ol>
-<li><code>GITHUB_TOKEN</code> in process environment</li>
-<li>Windows user environment variables (registry)</li>
+<li><code>GITHUB_TOKEN</code> in process environment (all OS)</li>
+<li><strong>Windows only:</strong> user env var from registry (helps IDE terminals)</li>
 <li><code>.env</code> at repo root</li>
 <li><code>.secrets/github_token</code></li>
 </ol>

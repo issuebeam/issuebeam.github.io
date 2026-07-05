@@ -1388,7 +1388,7 @@
 
 
 <h1 id="altri-agenti">Altri agenti<a class="headerlink" href="#altri-agenti" title="Permanent link">&para;</a></h1>
-<p>Copia <strong><code>AGENTS.md</code></strong> nel formato richiesto dal tuo tool.</p>
+<p>Copia <strong><code>AGENTS.md</code></strong> nel formato richiesto dal tuo tool. La CLI è identica su <strong>Windows, macOS e Linux</strong>.</p>
 <h2 id="riferimento-piattaforme">Riferimento piattaforme<a class="headerlink" href="#riferimento-piattaforme" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1402,7 +1402,7 @@
 <tr>
 <td><strong>Windsurf</strong></td>
 <td><code>.windsurfrules</code></td>
-<td><code>copy AGENTS.md .windsurfrules</code></td>
+<td><code>cp AGENTS.md .windsurfrules</code></td>
 </tr>
 <tr>
 <td><strong>Cline</strong></td>
@@ -1412,17 +1412,17 @@
 <tr>
 <td><strong>Continue.dev</strong></td>
 <td><code>.continue/rules</code> o config YAML</td>
-<td>Referenzia <code>AGENTS.md</code> nella config</td>
+<td>Riferisci <code>AGENTS.md</code> nella config</td>
 </tr>
 <tr>
 <td><strong>Gemini CLI</strong></td>
 <td><code>GEMINI.md</code></td>
-<td><code>copy AGENTS.md GEMINI.md</code></td>
+<td><code>cp AGENTS.md GEMINI.md</code></td>
 </tr>
 <tr>
 <td><strong>OpenAI Codex CLI</strong></td>
 <td><code>AGENTS.md</code></td>
-<td>Incluso da adopt — avvia dalla root</td>
+<td>Incluso da adopt — esegui dalla root del repo</td>
 </tr>
 <tr>
 <td><strong>Aider</strong></td>
@@ -1432,25 +1432,25 @@
 <tr>
 <td><strong>Custom / CI</strong></td>
 <td><code>AGENTS.md</code> nel system prompt</td>
-<td>Concedi tool shell limitato al repo</td>
+<td>Concedi shell tool con scope sul repo</td>
 </tr>
 </tbody>
 </table>
 <h2 id="uso-manuale-senza-ai">Uso manuale (senza AI)<a class="headerlink" href="#uso-manuale-senza-ai" title="Permanent link">&para;</a></h2>
 <p>Nessun agente richiesto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python scripts/github_issue.py create &quot;Bug: redirect login&quot; --labels bug
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;Bug: login redirect&quot;</span><span class="w"> </span>--labels<span class="w"> </span>bug
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
-<p>Molti team adottano issuebeam per <strong>CLI + label + template</strong> e aggiungono le regole agente per IDE in un secondo momento.</p>
+<p>Molti team adottano issuebeam per <strong>CLI + label + template</strong> prima, poi aggiungono regole agente per IDE.</p>
 <h2 id="agenti-custom-e-ci">Agenti custom e CI<a class="headerlink" href="#agenti-custom-e-ci" title="Permanent link">&para;</a></h2>
-<p>Qualsiasi automazione con Python può usare issuebeam senza LLM:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python scripts/github_issue.py create &quot;CI: test flaky su main&quot; --labels bug,area-infra
+<p>Qualsiasi automazione Python può usare issuebeam senza LLM:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;CI: flaky test on main&quot;</span><span class="w"> </span>--labels<span class="w"> </span>bug,area-infra
 </code></pre></div>
 <p>Per agenti LLM custom:</p>
 <ul>
 <li>Metti <code>AGENTS.md</code> nel system prompt o contesto RAG</li>
-<li>Concedi un tool shell limitato al repo</li>
-<li>Non passare il token al modello — solo variabili d'ambiente</li>
+<li>Concedi uno shell tool con scope sul repo</li>
+<li>Non passare mai il token al modello — solo variabili d'ambiente</li>
 </ul>
 
 

@@ -674,10 +674,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dopo-ladozione" class="md-nav__link">
+  <a href="#dopo-ladopt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dopo l'adozione
+        Dopo l'adopt
       
     </span>
   </a>
@@ -1357,10 +1357,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dopo-ladozione" class="md-nav__link">
+  <a href="#dopo-ladopt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dopo l'adozione
+        Dopo l'adopt
       
     </span>
   </a>
@@ -1389,9 +1389,9 @@
 
 <h1 id="adotta-in-un-progetto">Adotta in un progetto<a class="headerlink" href="#adotta-in-un-progetto" title="Permanent link">&para;</a></h1>
 <p>Dalla cartella <strong>issuebeam</strong> (o dopo aver clonato questo repo):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python scripts/adopt.py --target ..\my-repo --repo myorg/my-app
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>scripts/adopt.py<span class="w"> </span>--target<span class="w"> </span>../my-repo<span class="w"> </span>--repo<span class="w"> </span>myorg/my-app
 </code></pre></div>
-<p>Usa <code>--force</code> per sovrascrivere file già presenti.</p>
+<p>Usa <code>--force</code> per sovrascrivere file esistenti. Funziona su <strong>Windows, macOS e Linux</strong>.</p>
 <h2 id="cosa-copia-adoptpy">Cosa copia <code>adopt.py</code><a class="headerlink" href="#cosa-copia-adoptpy" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1433,12 +1433,12 @@
 <li><code>tracker/import-manifest.json</code> dall'esempio (se mancante)</li>
 <li><code>.secrets/.gitkeep</code></li>
 </ul>
-<h2 id="dopo-ladozione">Dopo l'adozione<a class="headerlink" href="#dopo-ladozione" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd ..\my-repo
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python scripts/github_issue.py labels --apply
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python scripts/github_issue.py list
+<h2 id="dopo-ladopt">Dopo l'adopt<a class="headerlink" href="#dopo-ladopt" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>../my-repo
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels<span class="w"> </span>--apply
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
-<p>Apri la cartella nel <strong>tuo agente AI</strong>:</p>
+<p>Apri la cartella nel tuo <strong>agente AI</strong>:</p>
 <table>
 <thead>
 <tr>

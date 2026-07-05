@@ -1435,20 +1435,22 @@
 </tbody>
 </table>
 <h2 id="option-a-local-file-recommended-after-adopt">Option A — local file (recommended after adopt)<a class="headerlink" href="#option-a-local-file-recommended-after-adopt" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>echo myorg/my-app&gt; tracker\github_repo
+<p>Cross-platform (Python 3):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pathlib import Path; Path(&#39;tracker/github_repo&#39;).write_text(&#39;myorg/my-app\n&#39;)&quot;</span>
 </code></pre></div>
 <h2 id="option-b-env">Option B — <code>.env</code><a class="headerlink" href="#option-b-env" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GITHUB_REPO=myorg/my-app
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>GITHUB_TOKEN=github_pat_...
 </code></pre></div>
 <h2 id="option-c-one-time-override">Option C — one-time override<a class="headerlink" href="#option-c-one-time-override" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python scripts/github_issue.py --repo myorg/my-app list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>--repo<span class="w"> </span>myorg/my-app<span class="w"> </span>list
 </code></pre></div>
 <h2 id="first-commands">First commands<a class="headerlink" href="#first-commands" title="Permanent link">&para;</a></h2>
 <p>After token and slug are set:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python scripts/github_issue.py labels --apply
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels<span class="w"> </span>--apply
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
+<p>Works the same on <strong>Windows, macOS, and Linux</strong>.</p>
 
 
 

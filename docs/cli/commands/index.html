@@ -1476,41 +1476,41 @@
 
 
 <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
-<p>Run all commands from the <strong>project root</strong> (where <code>scripts/</code> lives).</p>
+<p>Run all commands from the <strong>project root</strong> (where <code>scripts/</code> lives). Same CLI on <strong>Windows, macOS, and Linux</strong>.</p>
 <h2 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h2>
 <p>Defined in <code>tracker/labels.yml</code>. First time on a repo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python scripts/github_issue.py labels
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python scripts/github_issue.py labels --apply
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels<span class="w"> </span>--apply
 </code></pre></div>
 <h2 id="list-issues">List issues<a class="headerlink" href="#list-issues" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python scripts/github_issue.py list
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python scripts/github_issue.py list --state closed --limit 50
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list<span class="w"> </span>--state<span class="w"> </span>closed<span class="w"> </span>--limit<span class="w"> </span><span class="m">50</span>
 </code></pre></div>
 <h2 id="create-issue">Create issue<a class="headerlink" href="#create-issue" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python scripts/github_issue.py create &quot;Short title&quot; --body &quot;Markdown **description**&quot; --labels bug,priority-high,area-frontend
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;Short title&quot;</span><span class="w"> </span>--body<span class="w"> </span><span class="s2">&quot;Markdown **description**&quot;</span><span class="w"> </span>--labels<span class="w"> </span>bug,priority-high,area-frontend
 </code></pre></div>
 <p>From file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python scripts/github_issue.py create &quot;Safari bug&quot; --body-file description.md --labels bug
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>create<span class="w"> </span><span class="s2">&quot;Safari bug&quot;</span><span class="w"> </span>--body-file<span class="w"> </span>description.md<span class="w"> </span>--labels<span class="w"> </span>bug
 </code></pre></div>
 <h2 id="comment">Comment<a class="headerlink" href="#comment" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python scripts/github_issue.py comment 42 --body &quot;Fix applied in commit abc123&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>comment<span class="w"> </span><span class="m">42</span><span class="w"> </span>--body<span class="w"> </span><span class="s2">&quot;Fix applied in commit abc123&quot;</span>
 </code></pre></div>
 <h2 id="close">Close<a class="headerlink" href="#close" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python scripts/github_issue.py close 42
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>python scripts/github_issue.py close 42 --reason &quot;Duplicate of #40&quot;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>python scripts/github_issue.py close-batch 10 11 12 --reason &quot;Deprioritized backlog&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>close<span class="w"> </span><span class="m">42</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>close<span class="w"> </span><span class="m">42</span><span class="w"> </span>--reason<span class="w"> </span><span class="s2">&quot;Duplicate of #40&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>close-batch<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">12</span><span class="w"> </span>--reason<span class="w"> </span><span class="s2">&quot;Deprioritized backlog&quot;</span>
 </code></pre></div>
 <h2 id="import-batch-migrate-from-local-tracker">Import batch (migrate from local tracker)<a class="headerlink" href="#import-batch-migrate-from-local-tracker" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>copy tracker\import-manifest.example.json tracker\import-manifest.json
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>REM edit import-manifest.json
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>python scripts/github_issue.py import --dry-run
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>python scripts/github_issue.py import --apply
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cp<span class="w"> </span>tracker/import-manifest.example.json<span class="w"> </span>tracker/import-manifest.json
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># edit import-manifest.json</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>import<span class="w"> </span>--dry-run
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>import<span class="w"> </span>--apply
 </code></pre></div>
 <p>Include <strong><code>Legacy ID:</code></strong> in each imported body to prevent duplicates on re-import:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gs">**Legacy ID:**</span> <span class="sb">`BUG-001`</span>
 </code></pre></div>
 <h2 id="override-repo-slug">Override repo slug<a class="headerlink" href="#override-repo-slug" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python scripts/github_issue.py --repo myorg/my-app list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>--repo<span class="w"> </span>myorg/my-app<span class="w"> </span>list
 </code></pre></div>
 
 

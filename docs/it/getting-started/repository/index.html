@@ -1435,20 +1435,22 @@
 </tbody>
 </table>
 <h2 id="opzione-a-file-locale-consigliata-dopo-adopt">Opzione A — file locale (consigliata dopo adopt)<a class="headerlink" href="#opzione-a-file-locale-consigliata-dopo-adopt" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>echo myorg/my-app&gt; tracker\github_repo
+<p>Cross-platform (Python 3):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from pathlib import Path; Path(&#39;tracker/github_repo&#39;).write_text(&#39;myorg/my-app\n&#39;)&quot;</span>
 </code></pre></div>
 <h2 id="opzione-b-env">Opzione B — <code>.env</code><a class="headerlink" href="#opzione-b-env" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GITHUB_REPO=myorg/my-app
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>GITHUB_TOKEN=github_pat_...
 </code></pre></div>
 <h2 id="opzione-c-override-una-tantum">Opzione C — override una tantum<a class="headerlink" href="#opzione-c-override-una-tantum" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python scripts/github_issue.py --repo myorg/my-app list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>--repo<span class="w"> </span>myorg/my-app<span class="w"> </span>list
 </code></pre></div>
 <h2 id="primi-comandi">Primi comandi<a class="headerlink" href="#primi-comandi" title="Permanent link">&para;</a></h2>
 <p>Dopo token e slug:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python scripts/github_issue.py labels --apply
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python scripts/github_issue.py list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>labels<span class="w"> </span>--apply
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>scripts/github_issue.py<span class="w"> </span>list
 </code></pre></div>
+<p>Uguale su <strong>Windows, macOS e Linux</strong>.</p>
 
 
 
