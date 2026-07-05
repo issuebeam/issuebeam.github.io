@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" fill="none" role="img" aria-label="Issuebeam">
+  <title>Issuebeam</title>
+  <desc>Logo Issuebeam per sfondi scuri: punto sorgente, raggio viola e wordmark</desc>
+  <circle cx="28" cy="40" r="10" fill="#7c3aed"/>
+  <circle cx="28" cy="40" r="5" fill="#c084fc"/>
+  <line x1="38" y1="40" x2="58" y2="40" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+  <line x1="58" y1="40" x2="78" y2="40" stroke="#c084fc" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <text x="88" y="48" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800" fill="#f8fafc" letter-spacing="-0.02em">Issuebeam</text>
+</svg>

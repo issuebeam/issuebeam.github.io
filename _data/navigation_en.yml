@@ -1,0 +1,8 @@
+- title: "Home"
+  url: "/en/"
+- title: "Get started"
+  url: "/en/get-started/"
+- title: "Docs"
+  url: "https://github.com/issuebeam/issuebeam/blob/main/docs/GUIDA.md"
+- title: "GitHub"
+  url: "https://github.com/issuebeam/issuebeam"

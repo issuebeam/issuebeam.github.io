@@ -1,0 +1,100 @@
+---
+layout: default
+title: "Come iniziare — Issuebeam"
+lang: it
+permalink: /it/get-started/
+---
+
+<section class="relative pt-32 pb-20 overflow-hidden bg-grid-pattern border-b border-gray-200 dark:border-white/10">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-purple/10 border-l-2 border-brand-purple text-brand-purple text-xs font-mono font-bold uppercase mb-6">
+            Setup rapido
+        </div>
+        <h1 class="text-5xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Come iniziare</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-2xl">
+            Cinque passi per collegare Cursor a GitHub Issues. Funziona sul repo issuebeam o su un progetto adottato con <code>adopt.py</code>.
+        </p>
+    </div>
+</section>
+
+<section class="py-20 px-6 bg-white dark:bg-brand-dark transition-colors">
+    <div class="max-w-4xl mx-auto space-y-12">
+        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+            <div class="flex items-start gap-4">
+                <span class="text-brand-purple font-black font-mono text-2xl">01</span>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Token GitHub</h2>
+                    <p class="text-sm text-gray-500 mb-4">Crea un Personal Access Token con permesso <strong>Issues: read & write</strong> sul repository target.</p>
+                    <p class="text-sm text-gray-500 mb-4">Metodo consigliato: variabile utente Windows <code>GITHUB_TOKEN</code>. Alternativa: file <code>.secrets/github_token</code> (una riga, gitignored).</p>
+                    <div class="code-block text-sm">
+                        <span class="comment"># Verifica (dopo aver impostato il token)</span><br>
+                        <span class="cmd">python -c "import os; print('OK' if os.environ.get('GITHUB_TOKEN') else 'MANCANTE')"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+            <div class="flex items-start gap-4">
+                <span class="text-brand-pink font-black font-mono text-2xl">02</span>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Slug repository</h2>
+                    <p class="text-sm text-gray-500 mb-4">Indica quale repo GitHub usare (<code>owner/nome</code>).</p>
+                    <div class="code-block text-sm">
+                        <span class="cmd">echo myorg/my-app&gt; tracker\github_repo</span><br><br>
+                        <span class="comment"># oppure in .env</span><br>
+                        <span class="cmd">GITHUB_REPO=myorg/my-app</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+            <div class="flex items-start gap-4">
+                <span class="text-green-500 font-black font-mono text-2xl">03</span>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Adotta in un altro progetto (opzionale)</h2>
+                    <p class="text-sm text-gray-500 mb-4">Copia lo skeleton in un repo esistente con un comando.</p>
+                    <div class="code-block text-sm">
+                        <span class="cmd">python scripts/adopt.py --target ..\my-repo --repo myorg/my-app</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+            <div class="flex items-start gap-4">
+                <span class="text-brand-purple font-black font-mono text-2xl">04</span>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Label</h2>
+                    <p class="text-sm text-gray-500 mb-4">Applica le label definite in <code>tracker/labels.yml</code> sul repo GitHub.</p>
+                    <div class="code-block text-sm">
+                        <span class="cmd">python scripts/github_issue.py labels --apply</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+            <div class="flex items-start gap-4">
+                <span class="text-brand-pink font-black font-mono text-2xl">05</span>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Prima issue + Cursor</h2>
+                    <p class="text-sm text-gray-500 mb-4">Prova la CLI, poi apri il progetto in Cursor — la regola agente è già attiva.</p>
+                    <div class="code-block text-sm">
+                        <span class="cmd">python scripts/github_issue.py create "[Bug] Test da setup" --labels bug</span><br>
+                        <span class="cmd">python scripts/github_issue.py list</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-8">
+            <a href="{{ site.cta.docs_url }}" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
+                <i class="fas fa-book"></i> Guida completa (GUIDA.md)
+            </a>
+        </div>
+    </div>
+</section>

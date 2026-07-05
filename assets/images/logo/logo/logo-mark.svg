@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Issuebeam">
+  <title>Issuebeam</title>
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <circle cx="18" cy="32" r="9" fill="#7c3aed"/>
+  <circle cx="18" cy="32" r="4.5" fill="#c084fc"/>
+  <line x1="27" y1="32" x2="46" y2="32" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+  <line x1="46" y1="32" x2="56" y2="32" stroke="#c084fc" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+</svg>
