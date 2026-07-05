@@ -13,7 +13,7 @@ permalink: /it/get-started/
         </div>
         <h1 class="text-5xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Come iniziare</h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-2xl">
-            Cinque passi per collegare un agente AI a GitHub Issues. Funziona sul repo issuebeam o su un progetto adottato con <code>adopt.py</code>. Cursor, Claude Code, Copilot e altro — vedi anche <a href="/it/platforms/" class="text-brand-purple hover:underline">Piattaforme</a>.
+            Cinque passi per collegare un agente AI a GitHub Issues su <strong>Windows, macOS o Linux</strong>. Funziona sul repo issuebeam o su un progetto adottato con <code>adopt.py</code>. Cursor, Claude Code, Copilot e altro — vedi anche <a href="/it/platforms/" class="text-brand-purple hover:underline">Piattaforme</a>.
         </p>
     </div>
 </section>
@@ -26,7 +26,7 @@ permalink: /it/get-started/
                 <div>
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Token GitHub</h2>
                     <p class="text-sm text-gray-500 mb-4">Crea un Personal Access Token con permesso <strong>Issues: read & write</strong> sul repository target.</p>
-                    <p class="text-sm text-gray-500 mb-4">Metodo consigliato: variabile utente Windows <code>GITHUB_TOKEN</code>. Alternativa: file <code>.secrets/github_token</code> (una riga, gitignored).</p>
+                    <p class="text-sm text-gray-500 mb-4">Imposta <code>GITHUB_TOKEN</code> nell'ambiente — vedi la <a href="/docs/it/getting-started/token/" class="text-brand-purple hover:underline">guida token</a> per Windows, macOS e Linux. Alternative: <code>.env</code> (gitignored) o <code>.secrets/github_token</code> (una riga).</p>
                     <div class="code-block text-sm">
                         <span class="comment"># Verifica (dopo aver impostato il token)</span><br>
                         <span class="cmd">python -c "import os; print('OK' if os.environ.get('GITHUB_TOKEN') else 'MANCANTE')"</span>
@@ -42,7 +42,7 @@ permalink: /it/get-started/
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Slug repository</h2>
                     <p class="text-sm text-gray-500 mb-4">Indica quale repo GitHub usare (<code>owner/nome</code>).</p>
                     <div class="code-block text-sm">
-                        <span class="cmd">echo myorg/my-app&gt; tracker\github_repo</span><br><br>
+                        <span class="cmd">python -c "from pathlib import Path; Path('tracker/github_repo').write_text('myorg/my-app\n')"</span><br><br>
                         <span class="comment"># oppure in .env</span><br>
                         <span class="cmd">GITHUB_REPO=myorg/my-app</span>
                     </div>
@@ -57,7 +57,7 @@ permalink: /it/get-started/
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Adotta in un altro progetto (opzionale)</h2>
                     <p class="text-sm text-gray-500 mb-4">Copia lo skeleton in un repo esistente con un comando.</p>
                     <div class="code-block text-sm">
-                        <span class="cmd">python scripts/adopt.py --target ..\my-repo --repo myorg/my-app</span>
+                        <span class="cmd">python scripts/adopt.py --target ../my-repo --repo myorg/my-app</span>
                     </div>
                 </div>
             </div>

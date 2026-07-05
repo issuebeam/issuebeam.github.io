@@ -1,5 +1,5 @@
 title: "Issuebeam"
-description: "Collega agenti AI e GitHub Issues — Cursor, Claude Code, Copilot e altro. CLI Python, zero PowerShell, zero gh CLI."
+description: "Collega agenti AI e GitHub Issues su Windows, macOS e Linux — Cursor, Claude Code, Copilot e altro. CLI Python, zero PowerShell, zero gh CLI."
 baseurl: ""
 url: "https://issuebeam.github.io"
 
@@ -20,7 +20,7 @@ plugins:
 
 faq_en:
   - question: "What is Issuebeam?"
-    answer: "Issuebeam is a lightweight skeleton that connects AI coding agents to GitHub Issues. The agent runs a Python CLI to create, comment, and close issues — no gh CLI, no PowerShell scripts. Works with Cursor, Claude Code, Copilot, and any agent that can read repo instructions and run shell commands."
+    answer: "Issuebeam is a lightweight skeleton that connects AI coding agents to GitHub Issues on Windows, macOS, and Linux. The agent runs a Python CLI to create, comment, and close issues — no gh CLI, no PowerShell scripts. Works with Cursor, Claude Code, Copilot, and any agent that can read repo instructions and run shell commands."
   - question: "Is it Cursor-only?"
     answer: "No. Cursor is the best-tested path (.cursor/rules/github-issues.mdc), but the same CLI works with Claude Code (CLAUDE.md + AGENTS.md), GitHub Copilot (.github/copilot-instructions.md), Windsurf, Cline, Gemini CLI, Codex CLI, and manual use. See the Platforms page or the MkDocs guide at /docs/platforms/overview/."
   - question: "Do I need the gh CLI?"
@@ -30,11 +30,11 @@ faq_en:
   - question: "Can I adopt it into an existing project?"
     answer: "Yes. Run python scripts/adopt.py --target ../my-repo --repo myorg/my-app. It copies the CLI, labels, issue templates, and agent instruction files for multiple platforms, then writes tracker/github_repo with your slug."
   - question: "Where does the token live?"
-    answer: "Prefer Windows user env var GITHUB_TOKEN (works in IDE terminals). Alternatives: .env (gitignored) or .secrets/github_token. Never commit tokens or paste them in chat."
+    answer: "Set GITHUB_TOKEN as an environment variable (Windows, macOS, Linux). Alternatives: .env (gitignored) or .secrets/github_token. On Windows, the CLI can also read user env vars from the registry if the IDE terminal does not inherit them. Never commit tokens or paste them in chat."
 
 faq_it:
   - question: "Cos'è Issuebeam?"
-    answer: "Issuebeam è uno skeleton leggero che collega agenti AI di coding a GitHub Issues. L'agente esegue una CLI Python per creare, commentare e chiudere issue — senza gh CLI e senza script PowerShell. Funziona con Cursor, Claude Code, Copilot e qualsiasi agente che legga istruzioni nel repo ed esegua comandi shell."
+    answer: "Issuebeam è uno skeleton leggero che collega agenti AI di coding a GitHub Issues su Windows, macOS e Linux. L'agente esegue una CLI Python per creare, commentare e chiudere issue — senza gh CLI e senza script PowerShell. Funziona con Cursor, Claude Code, Copilot e qualsiasi agente che legga istruzioni nel repo ed esegua comandi shell."
   - question: "Funziona solo con Cursor?"
     answer: "No. Cursor è il percorso più testato (.cursor/rules/github-issues.mdc), ma la stessa CLI funziona con Claude Code (CLAUDE.md + AGENTS.md), GitHub Copilot (.github/copilot-instructions.md), Windsurf, Cline, Gemini CLI, Codex CLI e uso manuale. Vedi la pagina Piattaforme o la guida MkDocs su /docs/it/platforms/overview/."
   - question: "Serve la gh CLI?"
@@ -44,7 +44,7 @@ faq_it:
   - question: "Posso adottarlo in un progetto esistente?"
     answer: "Sì. Esegui python scripts/adopt.py --target ../my-repo --repo myorg/my-app. Copia CLI, label, template issue e file istruzioni per più piattaforme, poi scrive tracker/github_repo con il tuo slug."
   - question: "Dove metto il token?"
-    answer: "Preferisci la variabile utente Windows GITHUB_TOKEN (funziona nel terminale dell'IDE). Alternative: .env (gitignored) o .secrets/github_token. Mai committare token o incollarli in chat."
+    answer: "Imposta GITHUB_TOKEN come variabile d'ambiente (Windows, macOS, Linux). Alternative: .env (gitignored) o .secrets/github_token. Su Windows la CLI può leggere anche le variabili utente dal registry se il terminale IDE non le eredita. Mai committare token o incollarli in chat."
 
 social:
   github: "https://github.com/issuebeam/issuebeam"
