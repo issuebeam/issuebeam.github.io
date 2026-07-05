@@ -1,5 +1,5 @@
 title: "Issuebeam"
-description: "Vibe coding con Cursor? Traccia bug e task su GitHub Issues dalla chat — CLI Python, zero PowerShell, zero gh CLI."
+description: "Collega agenti AI e GitHub Issues — Cursor, Claude Code, Copilot e altro. CLI Python, zero PowerShell, zero gh CLI."
 baseurl: ""
 url: "https://issuebeam.github.io"
 
@@ -20,27 +20,31 @@ plugins:
 
 faq_en:
   - question: "What is Issuebeam?"
-    answer: "Issuebeam is a lightweight skeleton that connects Cursor chat to GitHub Issues. The agent runs a Python CLI to create, comment, and close issues — no gh CLI, no PowerShell scripts."
+    answer: "Issuebeam is a lightweight skeleton that connects AI coding agents to GitHub Issues. The agent runs a Python CLI to create, comment, and close issues — no gh CLI, no PowerShell scripts. Works with Cursor, Claude Code, Copilot, and any agent that can read repo instructions and run shell commands."
+  - question: "Is it Cursor-only?"
+    answer: "No. Cursor is the best-tested path (.cursor/rules/github-issues.mdc), but the same CLI works with Claude Code (CLAUDE.md + AGENTS.md), GitHub Copilot (.github/copilot-instructions.md), Windsurf, Cline, Gemini CLI, Codex CLI, and manual use. See the Platforms page or docs/PLATFORMS.md."
   - question: "Do I need the gh CLI?"
     answer: "No. Issuebeam uses a stdlib-only Python script (urllib) that talks directly to the GitHub REST API. You only need Python and a Personal Access Token with Issues read/write."
-  - question: "How does the Cursor agent know to use it?"
-    answer: "Copy the skeleton into your repo (or use adopt.py). The file .cursor/rules/github-issues.mdc has alwaysApply: true, so the agent runs python scripts/github_issue.py directly instead of asking you to paste commands."
+  - question: "How does the agent know to use it?"
+    answer: "Copy the skeleton into your repo (or use adopt.py). Each platform reads an instruction file: AGENTS.md (universal), .cursor/rules/ for Cursor, CLAUDE.md for Claude Code, .github/copilot-instructions.md for Copilot. The rule tells the agent to run python scripts/github_issue.py directly."
   - question: "Can I adopt it into an existing project?"
-    answer: "Yes. Run python scripts/adopt.py --target ../my-repo --repo myorg/my-app. It copies the CLI, labels, issue templates, and Cursor rule, then writes tracker/github_repo with your slug."
+    answer: "Yes. Run python scripts/adopt.py --target ../my-repo --repo myorg/my-app. It copies the CLI, labels, issue templates, and agent instruction files for multiple platforms, then writes tracker/github_repo with your slug."
   - question: "Where does the token live?"
-    answer: "Prefer Windows user env var GITHUB_TOKEN (works in Cursor terminals). Alternatives: .env (gitignored) or .secrets/github_token. Never commit tokens or paste them in chat."
+    answer: "Prefer Windows user env var GITHUB_TOKEN (works in IDE terminals). Alternatives: .env (gitignored) or .secrets/github_token. Never commit tokens or paste them in chat."
 
 faq_it:
   - question: "Cos'è Issuebeam?"
-    answer: "Issuebeam è uno skeleton leggero che collega la chat Cursor a GitHub Issues. L'agente esegue una CLI Python per creare, commentare e chiudere issue — senza gh CLI e senza script PowerShell."
+    answer: "Issuebeam è uno skeleton leggero che collega agenti AI di coding a GitHub Issues. L'agente esegue una CLI Python per creare, commentare e chiudere issue — senza gh CLI e senza script PowerShell. Funziona con Cursor, Claude Code, Copilot e qualsiasi agente che legga istruzioni nel repo ed esegua comandi shell."
+  - question: "Funziona solo con Cursor?"
+    answer: "No. Cursor è il percorso più testato (.cursor/rules/github-issues.mdc), ma la stessa CLI funziona con Claude Code (CLAUDE.md + AGENTS.md), GitHub Copilot (.github/copilot-instructions.md), Windsurf, Cline, Gemini CLI, Codex CLI e uso manuale. Vedi la pagina Piattaforme o docs/PIATTAFORME.md."
   - question: "Serve la gh CLI?"
     answer: "No. Issuebeam usa uno script Python solo stdlib (urllib) che parla direttamente con l'API REST di GitHub. Ti basta Python e un Personal Access Token con permessi Issues read/write."
-  - question: "Come fa l'agente Cursor a usarlo?"
-    answer: "Copia lo skeleton nel repo (o usa adopt.py). Il file .cursor/rules/github-issues.mdc ha alwaysApply: true, quindi l'agente esegue python scripts/github_issue.py da solo invece di chiederti comandi da incollare."
+  - question: "Come fa l'agente a usarlo?"
+    answer: "Copia lo skeleton nel repo (o usa adopt.py). Ogni piattaforma legge un file istruzioni: AGENTS.md (universale), .cursor/rules/ per Cursor, CLAUDE.md per Claude Code, .github/copilot-instructions.md per Copilot. La regola obbliga l'agente a eseguire python scripts/github_issue.py da solo."
   - question: "Posso adottarlo in un progetto esistente?"
-    answer: "Sì. Esegui python scripts/adopt.py --target ../my-repo --repo myorg/my-app. Copia CLI, label, template issue e regola Cursor, poi scrive tracker/github_repo con il tuo slug."
+    answer: "Sì. Esegui python scripts/adopt.py --target ../my-repo --repo myorg/my-app. Copia CLI, label, template issue e file istruzioni per più piattaforme, poi scrive tracker/github_repo con il tuo slug."
   - question: "Dove metto il token?"
-    answer: "Preferisci la variabile utente Windows GITHUB_TOKEN (funziona nel terminale Cursor). Alternative: .env (gitignored) o .secrets/github_token. Mai committare token o incollarli in chat."
+    answer: "Preferisci la variabile utente Windows GITHUB_TOKEN (funziona nel terminale dell'IDE). Alternative: .env (gitignored) o .secrets/github_token. Mai committare token o incollarli in chat."
 
 social:
   github: "https://github.com/issuebeam/issuebeam"
@@ -49,6 +53,8 @@ social:
 cta:
   github_url: "https://github.com/issuebeam/issuebeam"
   docs_url: "https://github.com/issuebeam/issuebeam/blob/main/docs/GUIDA.md"
+  platforms_url_en: "https://github.com/issuebeam/issuebeam/blob/main/docs/PLATFORMS.md"
+  platforms_url_it: "https://github.com/issuebeam/issuebeam/blob/main/docs/PIATTAFORME.md"
   get_started_it: "/it/get-started/"
   get_started_en: "/en/get-started/"
 
@@ -57,12 +63,12 @@ popup:
   en:
     url: "/en/get-started/"
     title: "Lost a bug in chat again?"
-    body: "Wire Cursor to GitHub Issues in minutes. Clone, token, labels — then let the agent track work for you."
+    body: "Wire any AI agent to GitHub Issues in minutes. Clone, token, labels — Cursor, Claude Code, Copilot, and more."
     button: "Get started"
   it:
     url: "/it/get-started/"
     title: "Hai perso un bug in chat?"
-    body: "Collega Cursor a GitHub Issues in pochi minuti. Clone, token, label — poi lascia che l'agente tracci il lavoro."
+    body: "Collega qualsiasi agente AI a GitHub Issues in pochi minuti. Clone, token, label — Cursor, Claude Code, Copilot e altro."
     button: "Come iniziare"
 
 permalink: "/:categories/:title/"
@@ -75,11 +81,13 @@ include:
 
 keywords:
   - vibe coding
+  - ai coding agent
   - cursor
+  - claude code
+  - github copilot
   - github issues
   - issue tracker
   - python cli
-  - cursor agent
   - developer workflow
   - bug tracking
   - task management

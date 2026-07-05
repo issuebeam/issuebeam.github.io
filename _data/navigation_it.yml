@@ -2,6 +2,8 @@
   url: "/it/"
 - title: "Come iniziare"
   url: "/it/get-started/"
+- title: "Piattaforme"
+  url: "/it/platforms/"
 - title: "Guida"
   url: "https://github.com/issuebeam/issuebeam/blob/main/docs/GUIDA.md"
 - title: "GitHub"

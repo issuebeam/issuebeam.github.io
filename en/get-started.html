@@ -13,7 +13,7 @@ permalink: /en/get-started/
         </div>
         <h1 class="text-5xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Get started</h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-2xl">
-            Five steps to wire Cursor to GitHub Issues. Works on the issuebeam repo or on a project adopted with <code>adopt.py</code>.
+            Five steps to wire an AI agent to GitHub Issues. Works on the issuebeam repo or on a project adopted with <code>adopt.py</code>. Cursor, Claude Code, Copilot, and more — see also <a href="/en/platforms/" class="text-brand-purple hover:underline">Platforms</a>.
         </p>
     </div>
 </section>
@@ -80,8 +80,8 @@ permalink: /en/get-started/
             <div class="flex items-start gap-4">
                 <span class="text-brand-pink font-black font-mono text-2xl">05</span>
                 <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">First issue + Cursor</h2>
-                    <p class="text-sm text-gray-500 mb-4">Test the CLI, then open the project in Cursor — the agent rule is already active.</p>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">First issue + AI agent</h2>
+                    <p class="text-sm text-gray-500 mb-4">Test the CLI, then open the project in your agent (Cursor, Claude Code, Copilot, …) — instructions are already in the repo.</p>
                     <div class="code-block text-sm">
                         <span class="cmd">python scripts/github_issue.py create "[Bug] Setup test" --labels bug</span><br>
                         <span class="cmd">python scripts/github_issue.py list</span>
@@ -90,9 +90,12 @@ permalink: /en/get-started/
             </div>
         </div>
 
-        <div class="text-center pt-8">
+        <div class="text-center pt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/en/platforms/" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-brand-purple text-brand-purple font-bold font-mono hover:bg-brand-purple hover:text-white transition-colors">
+                <i class="fas fa-layer-group"></i> Platforms guide
+            </a>
             <a href="{{ site.cta.docs_url }}" target="_blank" rel="noopener"
-                class="inline-flex items-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
                 <i class="fas fa-book"></i> Full guide (GUIDA.md)
             </a>
         </div>

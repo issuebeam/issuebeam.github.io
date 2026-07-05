@@ -14,7 +14,7 @@ permalink: /en/about/
             </div>
             <h1 class="text-5xl lg:text-6xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">What is <span class="text-brand-pink">Issuebeam</span></h1>
             <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed border-l border-gray-200 dark:border-white/10 pl-4">
-                Issuebeam is an open-source skeleton that wires Cursor chat to GitHub Issues. It addresses a real vibe-coding pain: bugs and tasks discussed in conversation and then forgotten. The fix is a lightweight Python CLI plus an agent rule that runs it automatically.
+                Issuebeam is an open-source skeleton that wires <strong>AI agents</strong> to GitHub Issues — Cursor, Claude Code, Copilot, and more. It addresses a real vibe-coding pain: bugs and tasks discussed in conversation and then forgotten. The fix is a lightweight Python CLI plus agent instructions that run it automatically.
             </p>
             <p class="text-sm text-gray-500 leading-relaxed">
                 No heavy dependencies, no <code>gh</code> CLI, no PowerShell scripts (often blocked by antivirus). Just stdlib, a token, and the official backlog on GitHub.
@@ -26,7 +26,7 @@ permalink: /en/about/
             </div>
             <div class="space-y-1">
                 <div>[CLI] scripts/github_issue.py</div>
-                <div>[RULE] .cursor/rules/github-issues.mdc</div>
+                <div>[AGENTS] AGENTS.md · CLAUDE.md · Copilot · Cursor</div>
                 <div>[LABELS] tracker/labels.yml</div>
                 <div>[ADOPT] scripts/adopt.py → other repos</div>
                 <div class="text-brand-pink mt-2">&gt; chat → tracked issue</div>
@@ -41,7 +41,7 @@ permalink: /en/about/
         <h3 class="text-4xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-8 text-center">From Qwibo, generalized</h3>
         <div class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-400">
             <p>
-                Issuebeam is a <strong>generalized extract</strong> of the tracking system used in the <a href="https://github.com/qwibo/qwibo" class="text-brand-purple hover:underline" target="_blank" rel="noopener">Qwibo</a> project (audio transcription + LLM summarization). Product-specific labels and templates were removed; what remains is the architecture that works with Cursor agents: runnable script, token from Windows registry, import manifest with Legacy ID.
+                Issuebeam is a <strong>generalized extract</strong> of the tracking system used in the <a href="https://github.com/qwibo/qwibo" class="text-brand-purple hover:underline" target="_blank" rel="noopener">Qwibo</a> project (audio transcription + LLM summarization). Product-specific labels and templates were removed; what remains is the architecture that works with any AI agent: runnable script, token from Windows registry, import manifest with Legacy ID, multi-platform instructions.
             </p>
             <p>
                 The name <em>Issuebeam</em> evokes a beam connecting chat to the tracker — a direct bridge between conversation and the official backlog.

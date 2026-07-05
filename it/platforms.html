@@ -1,0 +1,108 @@
+---
+layout: default
+title: "Piattaforme — Issuebeam"
+lang: it
+permalink: /it/platforms/
+---
+
+<section class="relative pt-32 pb-20 overflow-hidden bg-grid-pattern border-b border-gray-200 dark:border-white/10">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-purple/10 border-l-2 border-brand-purple text-brand-purple text-xs font-mono font-bold uppercase mb-6">
+            Non solo Cursor
+        </div>
+        <h1 class="text-5xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Piattaforme supportate</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-4 leading-relaxed max-w-2xl">
+            Issuebeam non è legato a un solo IDE. Il nucleo è sempre lo stesso: <strong>CLI Python</strong> + <strong>istruzioni per l'agente</strong> + <strong>GitHub Issues</strong>. Cambia solo il file che il tuo tool legge automaticamente.
+        </p>
+        <p class="text-sm text-gray-500 max-w-2xl">
+            Documentazione completa nel repo: <a href="{{ site.cta.platforms_url_it }}" class="text-brand-purple hover:underline" target="_blank" rel="noopener">docs/PIATTAFORME.md</a>
+        </p>
+    </div>
+</section>
+
+<section class="py-20 px-6 bg-white dark:bg-brand-dark transition-colors">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">Architettura</h2>
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-6 border border-gray-200 dark:border-white/10">
+                <div class="text-brand-purple font-mono font-bold mb-2">1 · Chat</div>
+                <p class="text-sm text-gray-500">Descrivi bug e task in linguaggio naturale — da Cursor, VS Code, terminale, …</p>
+            </div>
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-6 border border-gray-200 dark:border-white/10">
+                <div class="text-brand-pink font-mono font-bold mb-2">2 · Agente</div>
+                <p class="text-sm text-gray-500">Legge <code>AGENTS.md</code> o il file specifico della piattaforma ed esegue <code>github_issue.py</code>.</p>
+            </div>
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-6 border border-gray-200 dark:border-white/10">
+                <div class="text-green-500 font-mono font-bold mb-2">3 · GitHub</div>
+                <p class="text-sm text-gray-500">Issue ufficiali con label, template web e chiusura via <code>Fixes #N</code>.</p>
+            </div>
+        </div>
+
+        <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-6">Tabella rapida</h2>
+        <div class="overflow-x-auto mb-16">
+            <table class="w-full text-sm text-left border border-gray-200 dark:border-white/10">
+                <thead class="bg-gray-50 dark:bg-[#111] text-xs uppercase font-mono text-gray-500">
+                    <tr>
+                        <th class="p-4 border-b border-gray-200 dark:border-white/10">Piattaforma</th>
+                        <th class="p-4 border-b border-gray-200 dark:border-white/10">File istruzioni</th>
+                        <th class="p-4 border-b border-gray-200 dark:border-white/10">Note</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 dark:text-gray-400 divide-y divide-gray-200 dark:divide-white/10">
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Cursor</td><td class="p-4 font-mono text-xs">.cursor/rules/github-issues.mdc</td><td class="p-4">Percorso più testato · <code>alwaysApply</code></td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Claude Code</td><td class="p-4 font-mono text-xs">CLAUDE.md · AGENTS.md</td><td class="p-4">VS Code, CLI o desktop</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">GitHub Copilot</td><td class="p-4 font-mono text-xs">.github/copilot-instructions.md</td><td class="p-4">VS Code e Visual Studio</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Windsurf</td><td class="p-4 font-mono text-xs">.windsurfrules</td><td class="p-4">Copia da AGENTS.md</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Cline</td><td class="p-4 font-mono text-xs">.clinerules</td><td class="p-4">Istruzioni custom in VS Code</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Continue.dev</td><td class="p-4 font-mono text-xs">.continue/rules</td><td class="p-4">Config YAML o regole progetto</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Gemini CLI</td><td class="p-4 font-mono text-xs">GEMINI.md</td><td class="p-4">Copia da AGENTS.md</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Codex CLI</td><td class="p-4 font-mono text-xs">AGENTS.md</td><td class="p-4">Convenzione OpenAI</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Aider</td><td class="p-4 font-mono text-xs">AGENTS.md / CONVENTIONS.md</td><td class="p-4"><code>/read AGENTS.md</code> all'avvio</td></tr>
+                    <tr><td class="p-4 font-bold text-gray-900 dark:text-white">Manuale</td><td class="p-4 font-mono text-xs">—</td><td class="p-4">Solo CLI, senza agente AI</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-6">Setup per piattaforma</h2>
+        <div class="space-y-8">
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Cursor</h3>
+                <ol class="text-sm text-gray-500 space-y-2 list-decimal list-inside">
+                    <li>Clona issuebeam o esegui <code>adopt.py</code> nel tuo repo.</li>
+                    <li>Configura <code>GITHUB_TOKEN</code> e <code>tracker/github_repo</code>.</li>
+                    <li>Apri la cartella in Cursor — la regola <code>github-issues.mdc</code> è già attiva.</li>
+                </ol>
+            </div>
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">VS Code + Claude Code</h3>
+                <ol class="text-sm text-gray-500 space-y-2 list-decimal list-inside">
+                    <li>Adotta issuebeam — vengono copiati <code>CLAUDE.md</code> e <code>AGENTS.md</code>.</li>
+                    <li>Apri la <strong>root del repository</strong> in VS Code (non una sottocartella).</li>
+                    <li>Installa Claude Code e chiedi: <em>«Apri issue per…»</em> — deve eseguire lo script Python.</li>
+                </ol>
+            </div>
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">GitHub Copilot (VS Code / Visual Studio)</h3>
+                <ol class="text-sm text-gray-500 space-y-2 list-decimal list-inside">
+                    <li>Adotta issuebeam — include <code>.github/copilot-instructions.md</code>.</li>
+                    <li>Abilita Copilot Chat con permessi agent/terminal.</li>
+                    <li>Chiedi di tracciare un bug usando la CLI del progetto.</li>
+                </ol>
+            </div>
+            <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Altre piattaforme</h3>
+                <p class="text-sm text-gray-500 mb-4">Per Windsurf, Cline, Continue, Gemini CLI, Codex CLI e Aider: copia il contenuto di <code>AGENTS.md</code> nel formato richiesto dal tool (vedi tabella sopra). I requisiti sono sempre gli stessi: Python, token, slug repo, permesso shell.</p>
+            </div>
+        </div>
+
+        <div class="mt-16 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/it/get-started/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
+                <i class="fas fa-rocket"></i> Setup in 5 minuti
+            </a>
+            <a href="{{ site.cta.platforms_url_it }}" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 font-bold font-mono hover:bg-gray-100 dark:hover:bg-white/5 transition-colors text-gray-800 dark:text-white">
+                <i class="fas fa-book"></i> Guida completa piattaforme
+            </a>
+        </div>
+    </div>
+</section>

@@ -17,9 +17,9 @@
             </p>
             <p class="text-gray-600 text-sm mb-6">
                 {% if page.lang == 'it' %}
-                Collega la chat Cursor al tracker ufficiale su GitHub. L'agente crea e aggiorna issue con una CLI Python — senza gh CLI, senza PowerShell.
+                Collega agenti AI al tracker ufficiale su GitHub. L'agente crea e aggiorna issue con una CLI Python — Cursor, Claude Code, Copilot e altro. Senza gh CLI, senza PowerShell.
                 {% else %}
-                Wire Cursor chat to the official GitHub tracker. The agent creates and updates issues via a Python CLI — no gh CLI, no PowerShell.
+                Wire AI agents to the official GitHub tracker. The agent creates and updates issues via a Python CLI — Cursor, Claude Code, Copilot, and more. No gh CLI, no PowerShell.
                 {% endif %}
             </p>
             <div class="flex flex-col sm:flex-row gap-6">
@@ -60,6 +60,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{% if page.lang == 'it' %}/it/platforms/{% else %}/en/platforms/{% endif %}"
+                            class="hover:text-brand-purple transition-colors">
+                            {% if page.lang == 'it' %}Piattaforme{% else %}Platforms{% endif %}
+                        </a>
+                    </li>
+                    <li>
                         <a href="{% if page.lang == 'it' %}/it/get-started/{% else %}/en/get-started/{% endif %}"
                             class="hover:text-brand-purple transition-colors">
                             {% if page.lang == 'it' %}Come iniziare{% else %}Get started{% endif %}
@@ -75,6 +81,13 @@
                             class="hover:text-brand-purple transition-colors flex items-center gap-2">
                             <i class="fab fa-github text-xs"></i>
                             GitHub Repo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% if page.lang == 'it' %}{{ site.cta.platforms_url_it }}{% else %}{{ site.cta.platforms_url_en }}{% endif %}" target="_blank" rel="noopener"
+                            class="hover:text-brand-purple transition-colors flex items-center gap-2">
+                            <i class="fas fa-layer-group text-xs"></i>
+                            {% if page.lang == 'it' %}Guida piattaforme{% else %}Platforms guide{% endif %}
                         </a>
                     </li>
                     <li>
