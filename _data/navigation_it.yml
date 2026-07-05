@@ -5,6 +5,6 @@
 - title: "Piattaforme"
   url: "/it/platforms/"
 - title: "Guida"
-  url: "https://github.com/issuebeam/issuebeam/blob/main/docs/GUIDA.md"
+  url: "/docs/it/"
 - title: "GitHub"
   url: "https://github.com/issuebeam/issuebeam"
