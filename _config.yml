@@ -84,6 +84,7 @@ include:
   - assets
   - robots.txt
 
+
 keywords:
   - vibe coding
   - ai coding agent
@@ -96,3 +97,6 @@ keywords:
   - developer workflow
   - bug tracking
   - task management
+
+exclude:
+  - docs/overrides
