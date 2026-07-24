@@ -1,102 +1,18 @@
----
-layout: default
-title: "Get started — Issuebeam"
-lang: en
-permalink: /en/get-started/
----
-
-<section class="relative pt-32 pb-20 overflow-hidden bg-grid-pattern border-b border-gray-200 dark:border-white/10">
-    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-purple/10 border-l-2 border-brand-purple text-brand-purple text-xs font-mono font-bold uppercase mb-6">
-            Quick setup
-        </div>
-        <h1 class="text-5xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Get started</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-2xl">
-            Five steps to wire an AI agent to GitHub Issues on <strong>Windows, macOS, or Linux</strong>. Works on the issuebeam repo or on a project adopted with <code>adopt.py</code>. Cursor, Claude Code, Copilot, and more — see also <a href="/en/platforms/" class="text-brand-purple hover:underline">Platforms</a>.
-        </p>
-    </div>
-</section>
-
-<section class="py-20 px-6 bg-white dark:bg-brand-dark transition-colors">
-    <div class="max-w-4xl mx-auto space-y-12">
-        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
-            <div class="flex items-start gap-4">
-                <span class="text-brand-purple font-black font-mono text-2xl">01</span>
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">GitHub token</h2>
-                    <p class="text-sm text-gray-500 mb-4">Create a Personal Access Token with <strong>Issues: read & write</strong> on the target repository.</p>
-                    <p class="text-sm text-gray-500 mb-4">Set <code>GITHUB_TOKEN</code> in your environment — see the <a href="/docs/getting-started/token/" class="text-brand-purple hover:underline">token guide</a> for Windows, macOS, and Linux. Alternatives: <code>.env</code> (gitignored) or <code>.secrets/github_token</code> (one line).</p>
-                    <div class="code-block text-sm">
-                        <span class="comment"># Verify (after setting the token)</span><br>
-                        <span class="cmd">python -c "import os; print('OK' if os.environ.get('GITHUB_TOKEN') else 'MISSING')"</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
-            <div class="flex items-start gap-4">
-                <span class="text-brand-pink font-black font-mono text-2xl">02</span>
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Repository slug</h2>
-                    <p class="text-sm text-gray-500 mb-4">Tell the CLI which GitHub repo to use (<code>owner/name</code>).</p>
-                    <div class="code-block text-sm">
-                        <span class="cmd">python -c "from pathlib import Path; Path('tracker/github_repo').write_text('myorg/my-app\n')"</span><br><br>
-                        <span class="comment"># or in .env</span><br>
-                        <span class="cmd">GITHUB_REPO=myorg/my-app</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
-            <div class="flex items-start gap-4">
-                <span class="text-green-500 font-black font-mono text-2xl">03</span>
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Adopt into another project (optional)</h2>
-                    <p class="text-sm text-gray-500 mb-4">Copy the skeleton into an existing repo with one command.</p>
-                    <div class="code-block text-sm">
-                        <span class="cmd">python scripts/adopt.py --target ../my-repo --repo myorg/my-app</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
-            <div class="flex items-start gap-4">
-                <span class="text-brand-purple font-black font-mono text-2xl">04</span>
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Labels</h2>
-                    <p class="text-sm text-gray-500 mb-4">Apply labels from <code>tracker/labels.yml</code> to the GitHub repo.</p>
-                    <div class="code-block text-sm">
-                        <span class="cmd">python scripts/github_issue.py labels --apply</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-glow bg-gray-50 dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10">
-            <div class="flex items-start gap-4">
-                <span class="text-brand-pink font-black font-mono text-2xl">05</span>
-                <div>
-                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">First issue + AI agent</h2>
-                    <p class="text-sm text-gray-500 mb-4">Test the CLI, then open the project in your agent (Cursor, Claude Code, Copilot, …) — instructions are already in the repo.</p>
-                    <div class="code-block text-sm">
-                        <span class="cmd">python scripts/github_issue.py create "[Bug] Setup test" --labels bug</span><br>
-                        <span class="cmd">python scripts/github_issue.py list</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center pt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/en/platforms/" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-brand-purple text-brand-purple font-bold font-mono hover:bg-brand-purple hover:text-white transition-colors">
-                <i class="fas fa-layer-group"></i> Platforms guide
-            </a>
-            <a href="/docs/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors">
-                <i class="fas fa-book"></i> MkDocs documentation
-            </a>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved to Vibeissue</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://vibeissue.github.io/en/get-started.html">
+  <meta http-equiv="refresh" content="0;url=https://vibeissue.github.io/en/get-started.html">
+  <script>
+    location.replace("https://vibeissue.github.io" + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0">
+  <main style="text-align:center;padding:2rem">
+    <p>Moved to <a href="https://vibeissue.github.io/en/get-started.html" style="color:#a78bfa">Vibeissue</a>.</p>
+  </main>
+</body>
+</html>

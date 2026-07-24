@@ -1,165 +1,18 @@
----
-layout: default
-title: "Issuebeam — GitHub Issues dagli agenti AI"
-lang: it
-locale: it_IT
-description: "Vibe coding con agenti AI? Traccia bug e task su GitHub Issues — Windows, macOS, Linux. Cursor, Claude Code, Copilot e altro. CLI Python, zero PowerShell."
-permalink: /it/
----
-
-<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-x-hidden bg-grid-pattern">
-    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
-
-    <div class="max-w-7xl mx-auto hero-index__grid grid gap-8 items-center px-6 w-full relative z-10">
-        <div class="reveal active min-w-0">
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-brand-purple/10 border-l-4 border-brand-purple text-xs font-mono tracking-widest uppercase mb-8 text-brand-purple dark:text-brand-purpleLight">
-                <span class="w-2 h-2 rounded-none bg-brand-purple animate-pulse"></span>
-                Vibe coding · Agenti AI · GitHub Issues
-            </div>
-            <h1 class="hero-index__title font-black mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
-                Bug in chat.<br>
-                <span class="text-brand-purple">Issue su</span><br>
-                <span class="text-brand-pink">GitHub.</span>
-            </h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl lg:max-w-2xl leading-relaxed">
-                Con LLM e iterazione rapida perdi il filo di bug, task e idee sparse in conversazione. <strong>Issuebeam</strong> collega <strong>qualsiasi agente AI</strong> (Cursor, Claude Code, Copilot, …) al tracker ufficiale su <strong>Windows, macOS e Linux</strong>: l'agente esegue <code class="text-brand-purple">python scripts/github_issue.py</code> e crea issue vere — senza <code>gh</code> CLI e senza script PowerShell.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="{{ site.cta.github_url }}"
-                    class="flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono text-sm hover:bg-brand-pink transition-colors border border-transparent"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> Vai al repository
-                </a>
-                <a href="/it/get-started/"
-                    class="flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 font-bold font-mono text-sm hover:bg-gray-100 dark:hover:bg-white/5 transition-colors text-gray-800 dark:text-white">
-                    Come iniziare <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-            </div>
-
-            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-gray-500 uppercase">
-                <div>
-                    <div class="text-brand-purple font-bold text-lg mb-1 font-mono">CLI</div>
-                    <div>Solo stdlib Python</div>
-                </div>
-                <div>
-                    <div class="text-brand-pink font-bold text-lg mb-1 font-mono">Agenti</div>
-                    <div>Cursor · Claude · Copilot</div>
-                </div>
-                <div>
-                    <div class="text-gray-900 dark:text-white font-bold text-lg mb-1 font-mono">SO</div>
-                    <div>Win · macOS · Linux</div>
-                </div>
-                <div>
-                    <div class="text-green-500 font-bold text-lg mb-1 font-mono">MIT</div>
-                    <div>Open source</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="reveal delay-200 relative min-w-0 w-full">
-            <div class="hero-index__visual relative flex flex-col w-full max-w-full">
-            {% include hero-beam-animation.html %}
-            <div class="relative bg-[#0a0a0a] rounded-lg border border-brand-purple/30 shadow-2xl overflow-hidden font-mono text-xs">
-                <div class="bg-[#111] px-3 py-1.5 flex items-center justify-between border-b border-white/10">
-                    <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div class="text-gray-500 text-[11px]">issuebeam — ai agent</div>
-                </div>
-                <div class="px-3 py-2.5 space-y-1 text-gray-300 leading-snug">
-                    <div class="opacity-30 text-gray-500"># utente in chat</div>
-                    <div class="opacity-50">«Apri issue per il bug del form login su Safari»</div>
-                    <div class="opacity-70 text-brand-purpleLight mt-1.5">$ python scripts/github_issue.py create "[Bug] Login Safari redirect loop" --labels bug,priority-high</div>
-                    <div class="text-green-400 font-bold">CREATA #12: [Bug] Login Safari redirect loop</div>
-                    <div class="opacity-60">$ python scripts/github_issue.py list</div>
-                    <div class="text-gray-400">#12 open · bug · priority-high · area-frontend</div>
-                    <div class="text-brand-pink mt-1">→ backlog visibile al team, non sepolto in chat</div>
-                    <div class="text-gray-400 mt-1.5 flex items-center gap-2">
-                        <span class="text-brand-purple">➜</span>
-                        <span class="typing-animation border-r-2 border-brand-purple pr-1 animate-pulse">Prova con un bug vero</span>
-                    </div>
-                </div>
-            </div>
-            <div class="absolute right-3 top-[calc(11.5rem+1rem)] bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
-                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Caso tipico</div>
-                <div class="text-sm font-bold font-mono text-brand-purple">Chat → issue #12</div>
-            </div>
-            <div class="absolute left-3 bottom-4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-3 rounded shadow-xl hidden lg:block max-w-[10rem]">
-                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Zero gh CLI</div>
-                <div class="text-sm font-bold font-mono text-green-500">urllib + token</div>
-            </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="how-it-works" class="py-32 px-6 bg-gray-50 dark:bg-brand-surface border-b border-gray-200 dark:border-white/5 transition-colors">
-    <div class="max-w-7xl mx-auto">
-        <div class="mb-20">
-            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">01. Come funziona</h2>
-            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Dalla chat al backlog ufficiale</h3>
-            <p class="text-gray-500 mt-4 max-w-2xl">Descrivi il lavoro in linguaggio naturale. L'agente verifica duplicati, crea l'issue con label corrette e referenzia il numero nei commit. GitHub Issues diventa la fonte di verità.</p>
-            <div class="w-20 h-1 bg-brand-purple mt-6"></div>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8">
-            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
-                <div class="text-brand-purple mb-6"><i class="fas fa-comments text-3xl"></i></div>
-                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Parli in chat</h4>
-                <p class="text-sm text-gray-500 leading-relaxed">«Traccia bug…», «Apri issue per…», «Elenca le issue aperte». Non serve ricordare la sintassi CLI.</p>
-            </div>
-            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
-                <div class="text-brand-pink mb-6"><i class="fas fa-terminal text-3xl"></i></div>
-                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">L'agente esegue</h4>
-                <p class="text-sm text-gray-500 leading-relaxed">Le istruzioni in <code>AGENTS.md</code> (e file per Cursor, Claude, Copilot) obbligano l'agente a lanciare lo script Python — non a chiederti comandi da incollare.</p>
-            </div>
-            <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
-                <div class="text-green-500 mb-6"><i class="fab fa-github text-3xl"></i></div>
-                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Issue su GitHub</h4>
-                <p class="text-sm text-gray-500 leading-relaxed">Backlog condiviso, label, template web, chiusura automatica con <code>Fixes #N</code> nelle PR.</p>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center">
-            <a href="/it/platforms/" class="inline-flex items-center gap-2 text-sm font-bold font-mono text-brand-purple hover:text-brand-pink transition-colors">
-                <i class="fas fa-layer-group"></i> Tutte le piattaforme supportate
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="py-32 px-6 bg-white dark:bg-brand-dark transition-colors bg-grid-pattern relative">
-    <div class="absolute inset-0 bg-white/80 dark:bg-brand-dark/80"></div>
-    <div class="max-w-4xl mx-auto relative z-10">
-        <div class="text-center mb-16">
-            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">02. Domande frequenti</h2>
-            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Prima di clonare</h3>
-        </div>
-        {% include accordion-faq.html %}
-        <p class="text-center mt-10 font-mono text-xs text-gray-500">
-            Guida completa: <a href="/docs/it/" class="text-brand-purple hover:underline">MkDocs</a>
-            · <a href="/it/platforms/" class="text-brand-purple hover:underline">Piattaforme</a>
-        </p>
-    </div>
-</section>
-
-<section class="py-32 px-6 bg-[#0a0a0a] text-white border-y border-white/10">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 uppercase tracking-tight">Pronto a beamare le issue?</h2>
-        <p class="text-xl text-gray-400 mb-10">Clona il repo, configura token e slug, applica le label. Poi apri il tuo agente AI preferito e segnala un bug vero — guarda se finisce su GitHub.</p>
-        <div class="flex justify-center gap-4 flex-wrap">
-            <a href="{{ site.cta.github_url }}"
-                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono hover:bg-brand-pink transition-colors"
-                target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> github.com/issuebeam/issuebeam
-            </a>
-            <a href="/it/get-started/"
-                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold font-mono hover:bg-white/5 transition-colors">
-                <i class="fas fa-rocket"></i> Setup in 5 minuti
-            </a>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved to Vibeissue</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://vibeissue.github.io/it/">
+  <meta http-equiv="refresh" content="0;url=https://vibeissue.github.io/it/">
+  <script>
+    location.replace("https://vibeissue.github.io" + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0">
+  <main style="text-align:center;padding:2rem">
+    <p>Moved to <a href="https://vibeissue.github.io/it/" style="color:#a78bfa">Vibeissue</a>.</p>
+  </main>
+</body>
+</html>

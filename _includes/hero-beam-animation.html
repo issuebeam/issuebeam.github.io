@@ -1,59 +1,18 @@
-<link rel="stylesheet" href="{{ '/assets/css/hero-beam.css' | relative_url }}">
-
-<div class="hero-beam" aria-hidden="true">
-    <div class="hero-beam__stage">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none" role="presentation">
-            <defs>
-                <linearGradient id="beam-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#7c3aed" />
-                    <stop offset="100%" stop-color="#c084fc" />
-                </linearGradient>
-                <filter id="beam-blur" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feMerge>
-                        <feMergeNode in="blur" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-            </defs>
-
-            <!-- Chat bubble (fixed slot) -->
-            <g class="hero-beam__chat">
-                <rect x="16" y="72" width="58" height="44" rx="10" stroke="#64748b" stroke-width="2" fill="#1e293b" />
-                <polygon points="34,116 42,116 38,124" fill="#1e293b" stroke="#64748b" stroke-width="2" stroke-linejoin="round" />
-                <circle cx="32" cy="92" r="3" fill="#94a3b8" />
-                <circle cx="45" cy="92" r="3" fill="#94a3b8" />
-                <circle cx="58" cy="92" r="3" fill="#94a3b8" />
-            </g>
-
-            <!-- Source + glow -->
-            <circle class="hero-beam__glow" cx="118" cy="100" r="22" fill="#7c3aed" opacity="0.35" filter="url(#beam-blur)" />
-            <g class="hero-beam__source-outer">
-                <circle cx="118" cy="100" r="14" fill="#7c3aed" />
-                <circle cx="118" cy="100" r="7" fill="#c084fc" />
-            </g>
-
-            <!-- Beam lines -->
-            <line class="hero-beam__beam-main" x1="134" y1="100" x2="318" y2="100" stroke="url(#beam-gradient)" stroke-width="5" stroke-linecap="round" />
-            <line class="hero-beam__beam-tail" x1="318" y1="100" x2="348" y2="100" stroke="#c084fc" stroke-width="3.5" stroke-linecap="round" opacity="0.85" />
-
-            <!-- Particles along beam -->
-            <circle class="hero-beam__particle hero-beam__particle--1" cx="138" cy="100" r="3.5" fill="#ddd6fe" />
-            <circle class="hero-beam__particle hero-beam__particle--2" cx="138" cy="100" r="2.5" fill="#a78bfa" />
-            <circle class="hero-beam__particle hero-beam__particle--3" cx="138" cy="100" r="2" fill="#c084fc" />
-
-            <!-- GitHub issue card (fixed size slot) -->
-            <g class="hero-beam__card">
-                <rect x="352" y="58" width="116" height="84" rx="6" fill="#111827" stroke="#334155" stroke-width="1.5" />
-                <rect x="352" y="58" width="4" height="84" rx="2" fill="#7c3aed" />
-                <text x="366" y="82" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">#12</text>
-                <text x="366" y="102" fill="#a78bfa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5">[Bug] Login Safari</text>
-                <text x="366" y="116" fill="#a78bfa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5">redirect loop</text>
-                <rect x="366" y="124" width="28" height="12" rx="2" fill="rgba(215, 58, 73, 0.25)" stroke="#d73a4a" stroke-width="0.5" />
-                <text x="370" y="133" fill="#f87171" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="7">bug</text>
-                <rect x="398" y="124" width="52" height="12" rx="2" fill="rgba(182, 2, 5, 0.2)" stroke="#b60205" stroke-width="0.5" />
-                <text x="402" y="133" fill="#fca5a5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="7">priority-high</text>
-            </g>
-        </svg>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved to Vibeissue</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://vibeissue.github.io/_includes/hero-beam-animation.html">
+  <meta http-equiv="refresh" content="0;url=https://vibeissue.github.io/_includes/hero-beam-animation.html">
+  <script>
+    location.replace("https://vibeissue.github.io" + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0">
+  <main style="text-align:center;padding:2rem">
+    <p>Moved to <a href="https://vibeissue.github.io/_includes/hero-beam-animation.html" style="color:#a78bfa">Vibeissue</a>.</p>
+  </main>
+</body>
+</html>

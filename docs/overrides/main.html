@@ -1,12 +1,18 @@
-{% extends "base.html" %}
-
-{% block announce %}
-  {% if config.theme.language == "it" %}
-    {% set back_url = "https://issuebeam.github.io/it/" %}
-    {% set back_label = "← Torna al sito web issuebeam.github.io" %}
-  {% else %}
-    {% set back_url = "https://issuebeam.github.io/en/" %}
-    {% set back_label = "← Back to main website (issuebeam.github.io)" %}
-  {% endif %}
-  <a href="{{ back_url }}"><strong>{{ back_label }}</strong></a>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved to Vibeissue</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://vibeissue.github.io/docs/overrides/main.html">
+  <meta http-equiv="refresh" content="0;url=https://vibeissue.github.io/docs/overrides/main.html">
+  <script>
+    location.replace("https://vibeissue.github.io" + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0">
+  <main style="text-align:center;padding:2rem">
+    <p>Moved to <a href="https://vibeissue.github.io/docs/overrides/main.html" style="color:#a78bfa">Vibeissue</a>.</p>
+  </main>
+</body>
+</html>

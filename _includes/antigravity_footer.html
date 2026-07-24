@@ -1,136 +1,18 @@
-<!-- Footer -->
-<footer class="bg-brand-dark border-t border-white/5 py-20 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
-
-        <div class="max-w-sm">
-            <a href="{{ '/' | relative_url }}{% if page.lang == 'it' %}it/{% else %}en/{% endif %}"
-                class="inline-block mb-6 hover:opacity-90 transition-opacity">
-                <img src="/assets/images/logo/logo-horizontal-dark.svg?v=2" alt="Issuebeam"
-                    class="site-logo site-logo--footer h-24 w-auto object-contain">
-            </a>
-            <p class="text-gray-500 mb-2 text-sm font-bold uppercase tracking-widest">
-                {% if page.lang == 'it' %}
-                GitHub Issues per vibe coders
-                {% else %}
-                GitHub Issues for vibe coders
-                {% endif %}
-            </p>
-            <p class="text-gray-600 text-sm mb-6">
-                {% if page.lang == 'it' %}
-                Collega agenti AI al tracker ufficiale su GitHub. L'agente crea e aggiorna issue con una CLI Python — Cursor, Claude Code, Copilot e altro. Senza gh CLI, senza PowerShell.
-                {% else %}
-                Wire AI agents to the official GitHub tracker. The agent creates and updates issues via a Python CLI — Cursor, Claude Code, Copilot, and more. No gh CLI, no PowerShell.
-                {% endif %}
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6">
-                <div>
-                    <p class="text-gray-600 text-[10px] font-bold uppercase tracking-widest mb-2">
-                        {% if page.lang == 'it' %}Progetto{% else %}Project{% endif %}
-                    </p>
-                    <div class="flex gap-2">
-                        <a href="https://github.com/issuebeam/issuebeam" target="_blank" rel="noopener"
-                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all text-gray-400 hover:text-white"
-                            title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <p class="text-gray-600 text-[10px] font-bold uppercase tracking-widest mb-2">Antonio Trento</p>
-                    <div class="flex gap-2">
-                        <a href="https://x.com/antoniotrento" target="_blank" rel="noopener"
-                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all text-gray-400 hover:text-white"
-                            title="X / Twitter">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 w-full lg:w-auto">
-            <div>
-                <h4 class="font-bold mb-4 text-white text-sm uppercase tracking-wider">{% if page.lang == 'it'
-                    %}Prodotto{% else %}Product{% endif %}</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li>
-                        <a href="{% if page.lang == 'it' %}/it/about/{% else %}/en/about/{% endif %}"
-                            class="hover:text-brand-purple transition-colors">
-                            {% if page.lang == 'it' %}Chi siamo{% else %}About{% endif %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% if page.lang == 'it' %}/it/platforms/{% else %}/en/platforms/{% endif %}"
-                            class="hover:text-brand-purple transition-colors">
-                            {% if page.lang == 'it' %}Piattaforme{% else %}Platforms{% endif %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% if page.lang == 'it' %}/it/get-started/{% else %}/en/get-started/{% endif %}"
-                            class="hover:text-brand-purple transition-colors">
-                            {% if page.lang == 'it' %}Come iniziare{% else %}Get started{% endif %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 text-white text-sm uppercase tracking-wider">{% if page.lang == 'it' %}Risorse{% else %}Resources{% endif %}</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li>
-                        <a href="https://github.com/issuebeam/issuebeam" target="_blank" rel="noopener"
-                            class="hover:text-brand-purple transition-colors flex items-center gap-2">
-                            <i class="fab fa-github text-xs"></i>
-                            GitHub Repo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% if page.lang == 'it' %}/docs/it/platforms/overview/{% else %}/docs/platforms/overview/{% endif %}"
-                            class="hover:text-brand-purple transition-colors flex items-center gap-2">
-                            <i class="fas fa-layer-group text-xs"></i>
-                            {% if page.lang == 'it' %}Guida piattaforme{% else %}Platforms guide{% endif %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% include docs_href.html %}"
-                            class="hover:text-brand-purple transition-colors flex items-center gap-2">
-                            <i class="fas fa-book text-xs"></i>
-                            {% if page.lang == 'it' %}Documentazione MkDocs{% else %}MkDocs documentation{% endif %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 text-white text-sm uppercase tracking-wider">{% if page.lang == 'it'
-                    %}Autore{% else %}Author{% endif %}</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li>
-                        <a href="https://antoniotrento.net" target="_blank" rel="noopener"
-                            class="hover:text-brand-purple transition-colors">Antonio Trento</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/issuebeam/issuebeam/blob/main/LICENSE" target="_blank" rel="noopener"
-                            class="hover:text-brand-purple transition-colors">
-                            MIT License
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div
-        class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs">
-        <p>
-            © {{ site.time | date: '%Y' }} <a href="https://antoniotrento.net"
-                class="hover:text-brand-purple transition-colors">Antonio Trento</a>.
-            {% if page.lang == 'it' %}MIT — open source.{% else %}MIT — open source.{% endif %}
-        </p>
-        <p class="text-center md:text-right max-w-lg">
-            {% if page.lang == 'it' %}
-            Chat → issue GitHub. Un comando Python, zero script bloccati dall'antivirus.
-            {% else %}
-            Chat → GitHub issue. One Python command, zero antivirus-blocked scripts.
-            {% endif %}
-        </p>
-    </div>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved to Vibeissue</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://vibeissue.github.io/_includes/antigravity_footer.html">
+  <meta http-equiv="refresh" content="0;url=https://vibeissue.github.io/_includes/antigravity_footer.html">
+  <script>
+    location.replace("https://vibeissue.github.io" + location.pathname + location.search + location.hash);
+  </script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0">
+  <main style="text-align:center;padding:2rem">
+    <p>Moved to <a href="https://vibeissue.github.io/_includes/antigravity_footer.html" style="color:#a78bfa">Vibeissue</a>.</p>
+  </main>
+</body>
+</html>
